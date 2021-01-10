@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +14,35 @@
                     <view key="view" contentMode="scaleToFill" id="8wk-Xa-2g8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My SetList" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-XA-ba1">
+                                <rect key="frame" x="16" y="20" width="343" height="18"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="18"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.25098039220000001" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaP-1e-a3o">
+                                <rect key="frame" x="16" y="46" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" red="0.92156862745098034" green="0.20784313725490194" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vMI-QJ-d3l"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.92941176470588238" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1UH-XA-ba1" firstAttribute="top" secondItem="vMI-QJ-d3l" secondAttribute="top" constant="20" id="8nM-xZ-n88"/>
+                            <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="1UH-XA-ba1" secondAttribute="trailing" constant="16" id="DYg-Nk-yme"/>
+                            <constraint firstItem="1UH-XA-ba1" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="16" id="l2y-DV-mD8"/>
+                            <constraint firstItem="GaP-1e-a3o" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="16" id="miH-06-HL6"/>
+                            <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="GaP-1e-a3o" secondAttribute="trailing" constant="16" id="twG-lb-RUq"/>
+                            <constraint firstItem="GaP-1e-a3o" firstAttribute="top" secondItem="1UH-XA-ba1" secondAttribute="bottom" constant="8" symbolic="YES" id="ydI-ku-bmA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luH-v7-zcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="181"/>
+            <point key="canvasLocation" x="-127.2" y="180.35982008995504"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
