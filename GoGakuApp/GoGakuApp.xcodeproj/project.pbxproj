@@ -14,6 +14,15 @@
 		A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32879B225AB3EFD00172530 /* HomeViewController.swift */; };
 		A32879B725AB3F4500172530 /* InitialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32879B625AB3F4500172530 /* InitialViewController.storyboard */; };
 		A32879BA25AB3F5100172530 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32879B925AB3F5100172530 /* InitialViewController.swift */; };
+		A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BBA25AB42850075AD18 /* Coordinator.swift */; };
+		A39B1BBF25AB428E0075AD18 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */; };
+		A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */; };
+		A39B1BC725AB448E0075AD18 /* ListSetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39B1BC625AB448E0075AD18 /* ListSetViewController.storyboard */; };
+		A39B1BCA25AB449E0075AD18 /* ListSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */; };
+		A39B1BCD25AB44B20075AD18 /* ListDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39B1BCC25AB44B20075AD18 /* ListDetailViewController.storyboard */; };
+		A39B1BD025AB44BA0075AD18 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BCF25AB44BA0075AD18 /* ListDetailViewController.swift */; };
+		A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */; };
+		A39B1BD625AB44E00075AD18 /* ListDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BD525AB44E00075AD18 /* ListDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		A32879B225AB3EFD00172530 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A32879B625AB3F4500172530 /* InitialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialViewController.storyboard; sourceTree = "<group>"; };
 		A32879B925AB3F5100172530 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		A39B1BBA25AB42850075AD18 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A39B1BC625AB448E0075AD18 /* ListSetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListSetViewController.storyboard; sourceTree = "<group>"; };
+		A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetViewController.swift; sourceTree = "<group>"; };
+		A39B1BCC25AB44B20075AD18 /* ListDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDetailViewController.storyboard; sourceTree = "<group>"; };
+		A39B1BCF25AB44BA0075AD18 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetCoordinator.swift; sourceTree = "<group>"; };
+		A39B1BD525AB44E00075AD18 /* ListDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +76,10 @@
 		A328799425AB33DC00172530 /* GoGakuApp */ = {
 			isa = PBXGroup;
 			children = (
+				A39B1BB825AB41FF0075AD18 /* Setting */,
 				A32879AC25AB34E000172530 /* Network */,
 				A32879AB25AB34D900172530 /* Extenseion */,
 				A32879AA25AB341700172530 /* Scene */,
-				A328799525AB33DC00172530 /* AppDelegate.swift */,
-				A328799725AB33DC00172530 /* SceneDelegate.swift */,
-				A328799E25AB33DD00172530 /* Assets.xcassets */,
 				A32879A325AB33DD00172530 /* Info.plist */,
 			);
 			path = GoGakuApp;
@@ -95,6 +111,8 @@
 		A32879AD25AB34E800172530 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A39B1BC525AB44680075AD18 /* ListDetailViewController */,
+				A39B1BC425AB445C0075AD18 /* ListSetViewController */,
 				A32879AE25AB3EC300172530 /* HomeViewController */,
 			);
 			path = Home;
@@ -105,6 +123,7 @@
 			children = (
 				A32879AF25AB3EEF00172530 /* HomeViewController.storyboard */,
 				A32879B225AB3EFD00172530 /* HomeViewController.swift */,
+				A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -116,6 +135,46 @@
 				A32879B925AB3F5100172530 /* InitialViewController.swift */,
 			);
 			path = initial;
+			sourceTree = "<group>";
+		};
+		A39B1BB825AB41FF0075AD18 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A328799E25AB33DD00172530 /* Assets.xcassets */,
+				A328799725AB33DC00172530 /* SceneDelegate.swift */,
+				A328799525AB33DC00172530 /* AppDelegate.swift */,
+				A39B1BB925AB426B0075AD18 /* Coordinator */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A39B1BB925AB426B0075AD18 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A39B1BBA25AB42850075AD18 /* Coordinator.swift */,
+				A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A39B1BC425AB445C0075AD18 /* ListSetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A39B1BC625AB448E0075AD18 /* ListSetViewController.storyboard */,
+				A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */,
+				A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */,
+			);
+			path = ListSetViewController;
+			sourceTree = "<group>";
+		};
+		A39B1BC525AB44680075AD18 /* ListDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A39B1BCC25AB44B20075AD18 /* ListDetailViewController.storyboard */,
+				A39B1BCF25AB44BA0075AD18 /* ListDetailViewController.swift */,
+				A39B1BD525AB44E00075AD18 /* ListDetailCoordinator.swift */,
+			);
+			path = ListDetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +234,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39B1BC725AB448E0075AD18 /* ListSetViewController.storyboard in Resources */,
 				A32879B025AB3EEF00172530 /* HomeViewController.storyboard in Resources */,
 				A32879B725AB3F4500172530 /* InitialViewController.storyboard in Resources */,
 				A328799F25AB33DD00172530 /* Assets.xcassets in Resources */,
+				A39B1BCD25AB44B20075AD18 /* ListDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,10 +249,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39B1BD625AB44E00075AD18 /* ListDetailCoordinator.swift in Sources */,
+				A39B1BBF25AB428E0075AD18 /* AppCoordinator.swift in Sources */,
 				A32879BA25AB3F5100172530 /* InitialViewController.swift in Sources */,
 				A328799625AB33DC00172530 /* AppDelegate.swift in Sources */,
+				A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */,
 				A328799825AB33DC00172530 /* SceneDelegate.swift in Sources */,
+				A39B1BCA25AB449E0075AD18 /* ListSetViewController.swift in Sources */,
+				A39B1BD025AB44BA0075AD18 /* ListDetailViewController.swift in Sources */,
+				A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */,
 				A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */,
+				A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
