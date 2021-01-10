@@ -9,6 +9,7 @@ import UIKit
 
 protocol ListSetViewControllerFlow: class {
     func coordinateToListDetailVC()
+    func coordinateToListAddVC()
 }
 
 class ListSetCoordinator: Coordinator, ListSetViewControllerFlow {
@@ -27,6 +28,12 @@ class ListSetCoordinator: Coordinator, ListSetViewControllerFlow {
     }
     
     func coordinateToListDetailVC() {
-        
+        let listSetCoordinator = ListDetailCoordinator(navigationController: navigationController)
+        coordinate(to: listSetCoordinator)
+    }
+    
+    func coordinateToListAddVC() {
+        let listSetCoordinator = ListAddCoordinator(navigationController: navigationController)
+        coordinate(to: listSetCoordinator)
     }
 }

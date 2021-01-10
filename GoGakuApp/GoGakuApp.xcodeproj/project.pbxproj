@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943D8B7E1474307982A2EA48 /* Pods_GoGakuApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFEB7504D360E28164EB9EA /* Pods_GoGakuApp.framework */; };
 		A328799625AB33DC00172530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328799525AB33DC00172530 /* AppDelegate.swift */; };
 		A328799825AB33DC00172530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328799725AB33DC00172530 /* SceneDelegate.swift */; };
 		A328799F25AB33DD00172530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A328799E25AB33DD00172530 /* Assets.xcassets */; };
@@ -23,9 +24,20 @@
 		A39B1BD025AB44BA0075AD18 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BCF25AB44BA0075AD18 /* ListDetailViewController.swift */; };
 		A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */; };
 		A39B1BD625AB44E00075AD18 /* ListDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BD525AB44E00075AD18 /* ListDetailCoordinator.swift */; };
+		A39B1BE125AB562F0075AD18 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BE025AB562F0075AD18 /* UIColor + Extension.swift */; };
+		A39B1BE725AB670C0075AD18 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BE625AB670C0075AD18 /* BaseViewController.swift */; };
+		A39B1BEB25AB78F10075AD18 /* ListSetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BEA25AB78F10075AD18 /* ListSetCollectionViewCell.swift */; };
+		A39B1BEE25AB79710075AD18 /* ListSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BED25AB79710075AD18 /* ListSetViewModel.swift */; };
+		A39B1BF125AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BF025AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift */; };
+		A39B1BF725AB7FC60075AD18 /* ListAddViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39B1BF625AB7FC60075AD18 /* ListAddViewController.storyboard */; };
+		A39B1BFA25AB7FD60075AD18 /* ListAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BF925AB7FD60075AD18 /* ListAddViewController.swift */; };
+		A39B1BFD25AB80330075AD18 /* ListAddCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BFC25AB80330075AD18 /* ListAddCoordinator.swift */; };
+		A39B1C0025AB88B90075AD18 /* Calendar + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BFF25AB88B90075AD18 /* Calendar + Extension.swift */; };
+		A39B1C0425AB89060075AD18 /* GOGAKUConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1C0325AB89060075AD18 /* GOGAKUConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CFEB7504D360E28164EB9EA /* Pods_GoGakuApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoGakuApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A328799225AB33DC00172530 /* GoGakuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGakuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A328799525AB33DC00172530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A328799725AB33DC00172530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +56,18 @@
 		A39B1BCF25AB44BA0075AD18 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetCoordinator.swift; sourceTree = "<group>"; };
 		A39B1BD525AB44E00075AD18 /* ListDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailCoordinator.swift; sourceTree = "<group>"; };
+		A39B1BE025AB562F0075AD18 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		A39B1BE625AB670C0075AD18 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A39B1BEA25AB78F10075AD18 /* ListSetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetCollectionViewCell.swift; sourceTree = "<group>"; };
+		A39B1BED25AB79710075AD18 /* ListSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetViewModel.swift; sourceTree = "<group>"; };
+		A39B1BF025AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetAddButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		A39B1BF625AB7FC60075AD18 /* ListAddViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListAddViewController.storyboard; sourceTree = "<group>"; };
+		A39B1BF925AB7FD60075AD18 /* ListAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddViewController.swift; sourceTree = "<group>"; };
+		A39B1BFC25AB80330075AD18 /* ListAddCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddCoordinator.swift; sourceTree = "<group>"; };
+		A39B1BFF25AB88B90075AD18 /* Calendar + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar + Extension.swift"; sourceTree = "<group>"; };
+		A39B1C0325AB89060075AD18 /* GOGAKUConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOGAKUConst.swift; sourceTree = "<group>"; };
+		B3DF3A6458E1783366C550E3 /* Pods-GoGakuApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGakuApp.release.xcconfig"; path = "Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp.release.xcconfig"; sourceTree = "<group>"; };
+		DA04BBB71660C5641BCFF3B3 /* Pods-GoGakuApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGakuApp.debug.xcconfig"; path = "Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943D8B7E1474307982A2EA48 /* Pods_GoGakuApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E2729ADFB4743A582ECBAB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CFEB7504D360E28164EB9EA /* Pods_GoGakuApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79C532841DEC128868ADFEE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA04BBB71660C5641BCFF3B3 /* Pods-GoGakuApp.debug.xcconfig */,
+				B3DF3A6458E1783366C550E3 /* Pods-GoGakuApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A328798925AB33DC00172530 = {
 			isa = PBXGroup;
 			children = (
 				A328799425AB33DC00172530 /* GoGakuApp */,
 				A328799325AB33DC00172530 /* Products */,
+				79C532841DEC128868ADFEE1 /* Pods */,
+				6E2729ADFB4743A582ECBAB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +120,7 @@
 		A328799425AB33DC00172530 /* GoGakuApp */ = {
 			isa = PBXGroup;
 			children = (
+				A39B1C0225AB88E50075AD18 /* Const */,
 				A39B1BB825AB41FF0075AD18 /* Setting */,
 				A32879AC25AB34E000172530 /* Network */,
 				A32879AB25AB34D900172530 /* Extenseion */,
@@ -88,6 +133,7 @@
 		A32879AA25AB341700172530 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A39B1BE525AB66F20075AD18 /* Base */,
 				A32879B525AB3F2800172530 /* initial */,
 				A32879AD25AB34E800172530 /* Home */,
 			);
@@ -97,6 +143,8 @@
 		A32879AB25AB34D900172530 /* Extenseion */ = {
 			isa = PBXGroup;
 			children = (
+				A39B1BE025AB562F0075AD18 /* UIColor + Extension.swift */,
+				A39B1BFF25AB88B90075AD18 /* Calendar + Extension.swift */,
 			);
 			path = Extenseion;
 			sourceTree = "<group>";
@@ -111,6 +159,7 @@
 		A32879AD25AB34E800172530 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A39B1BF525AB7FB20075AD18 /* ListAddViewController */,
 				A39B1BC525AB44680075AD18 /* ListDetailViewController */,
 				A39B1BC425AB445C0075AD18 /* ListSetViewController */,
 				A32879AE25AB3EC300172530 /* HomeViewController */,
@@ -161,8 +210,11 @@
 			isa = PBXGroup;
 			children = (
 				A39B1BC625AB448E0075AD18 /* ListSetViewController.storyboard */,
-				A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */,
+				A39B1BEA25AB78F10075AD18 /* ListSetCollectionViewCell.swift */,
+				A39B1BF025AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift */,
 				A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */,
+				A39B1BED25AB79710075AD18 /* ListSetViewModel.swift */,
+				A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */,
 			);
 			path = ListSetViewController;
 			sourceTree = "<group>";
@@ -177,6 +229,32 @@
 			path = ListDetailViewController;
 			sourceTree = "<group>";
 		};
+		A39B1BE525AB66F20075AD18 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A39B1BE625AB670C0075AD18 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A39B1BF525AB7FB20075AD18 /* ListAddViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A39B1BF625AB7FC60075AD18 /* ListAddViewController.storyboard */,
+				A39B1BF925AB7FD60075AD18 /* ListAddViewController.swift */,
+				A39B1BFC25AB80330075AD18 /* ListAddCoordinator.swift */,
+			);
+			path = ListAddViewController;
+			sourceTree = "<group>";
+		};
+		A39B1C0225AB88E50075AD18 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				A39B1C0325AB89060075AD18 /* GOGAKUConst.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A32879A625AB33DD00172530 /* Build configuration list for PBXNativeTarget "GoGakuApp" */;
 			buildPhases = (
+				2BD0F8A8B97BA63289DEEE3A /* [CP] Check Pods Manifest.lock */,
 				A328798E25AB33DC00172530 /* Sources */,
 				A328798F25AB33DC00172530 /* Frameworks */,
 				A328799025AB33DC00172530 /* Resources */,
+				E8D09111D7B827BE391E9297 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +316,7 @@
 			files = (
 				A39B1BC725AB448E0075AD18 /* ListSetViewController.storyboard in Resources */,
 				A32879B025AB3EEF00172530 /* HomeViewController.storyboard in Resources */,
+				A39B1BF725AB7FC60075AD18 /* ListAddViewController.storyboard in Resources */,
 				A32879B725AB3F4500172530 /* InitialViewController.storyboard in Resources */,
 				A328799F25AB33DD00172530 /* Assets.xcassets in Resources */,
 				A39B1BCD25AB44B20075AD18 /* ListDetailViewController.storyboard in Resources */,
@@ -244,20 +325,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BD0F8A8B97BA63289DEEE3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoGakuApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D09111D7B827BE391E9297 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A328798E25AB33DC00172530 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39B1BE725AB670C0075AD18 /* BaseViewController.swift in Sources */,
 				A39B1BD625AB44E00075AD18 /* ListDetailCoordinator.swift in Sources */,
 				A39B1BBF25AB428E0075AD18 /* AppCoordinator.swift in Sources */,
 				A32879BA25AB3F5100172530 /* InitialViewController.swift in Sources */,
 				A328799625AB33DC00172530 /* AppDelegate.swift in Sources */,
+				A39B1C0025AB88B90075AD18 /* Calendar + Extension.swift in Sources */,
 				A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */,
+				A39B1BEE25AB79710075AD18 /* ListSetViewModel.swift in Sources */,
+				A39B1BF125AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift in Sources */,
 				A328799825AB33DC00172530 /* SceneDelegate.swift in Sources */,
 				A39B1BCA25AB449E0075AD18 /* ListSetViewController.swift in Sources */,
+				A39B1BFD25AB80330075AD18 /* ListAddCoordinator.swift in Sources */,
 				A39B1BD025AB44BA0075AD18 /* ListDetailViewController.swift in Sources */,
+				A39B1C0425AB89060075AD18 /* GOGAKUConst.swift in Sources */,
+				A39B1BEB25AB78F10075AD18 /* ListSetCollectionViewCell.swift in Sources */,
 				A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */,
+				A39B1BFA25AB7FD60075AD18 /* ListAddViewController.swift in Sources */,
+				A39B1BE125AB562F0075AD18 /* UIColor + Extension.swift in Sources */,
 				A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */,
 				A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */,
 			);
@@ -384,6 +516,7 @@
 		};
 		A32879A725AB33DD00172530 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA04BBB71660C5641BCFF3B3 /* Pods-GoGakuApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -403,6 +536,7 @@
 		};
 		A32879A825AB33DD00172530 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3DF3A6458E1783366C550E3 /* Pods-GoGakuApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

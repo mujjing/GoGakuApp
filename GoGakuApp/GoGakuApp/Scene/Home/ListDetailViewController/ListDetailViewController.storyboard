@@ -14,8 +14,22 @@
                     <view key="view" contentMode="scaleToFill" id="qxg-oh-Iby">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-fx-jQa">
+                                <rect key="frame" x="10" y="0.0" width="355" height="1"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.84313725490000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pDO-O8-ytC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BZC-ct-83S"/>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.92941176470588238" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qqS-fx-jQa" firstAttribute="top" secondItem="BZC-ct-83S" secondAttribute="top" id="VW6-Wb-1Ip"/>
+                            <constraint firstItem="qqS-fx-jQa" firstAttribute="leading" secondItem="qxg-oh-Iby" secondAttribute="leading" constant="10" id="bIj-du-bI8"/>
+                            <constraint firstAttribute="trailing" secondItem="qqS-fx-jQa" secondAttribute="trailing" constant="10" id="kdt-5c-bDQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSq-aG-8gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

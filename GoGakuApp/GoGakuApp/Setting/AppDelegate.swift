@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         coordinator = AppCoordinator(window: window!)
         coordinator?.start()
+        
         return true
     }
 
