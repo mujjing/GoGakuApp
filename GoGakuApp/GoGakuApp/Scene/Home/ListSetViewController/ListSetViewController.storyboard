@@ -17,14 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学習セットリスト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-hf-eQ8">
-                                <rect key="frame" x="16" y="20" width="343" height="18"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="18"/>
-                                <color key="textColor" red="0.16862745098039217" green="0.25098039215686274" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lXU-tV-e6q">
-                                <rect key="frame" x="0.0" y="46" width="375" height="621"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P5Q-cg-F1N">
                                     <size key="itemSize" width="128" height="128"/>
@@ -82,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-52-kso">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-52-kso" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="145"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="セット追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ad-iy-Zw4">
@@ -119,6 +113,14 @@
                                                         <constraint firstAttribute="height" constant="145" id="myg-BL-2tM"/>
                                                         <constraint firstItem="4Ad-iy-Zw4" firstAttribute="centerX" secondItem="CcX-52-kso" secondAttribute="centerX" id="oB6-0q-QgU"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                            <color key="value" red="0.70980392160000005" green="0.80784313730000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -148,16 +150,13 @@
                         <viewLayoutGuide key="safeArea" id="iRS-Zl-2wz"/>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.92941176470588238" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ogO-hf-eQ8" firstAttribute="leading" secondItem="iRS-Zl-2wz" secondAttribute="leading" constant="16" id="2U1-dg-juj"/>
                             <constraint firstItem="lXU-tV-e6q" firstAttribute="trailing" secondItem="iRS-Zl-2wz" secondAttribute="trailing" id="5MM-QM-3zR"/>
                             <constraint firstItem="2Td-KJ-cQi" firstAttribute="top" secondItem="iRS-Zl-2wz" secondAttribute="top" id="8CL-bK-ak1"/>
-                            <constraint firstItem="ogO-hf-eQ8" firstAttribute="top" secondItem="iRS-Zl-2wz" secondAttribute="top" constant="20" id="ACU-Vw-0XB"/>
                             <constraint firstItem="lXU-tV-e6q" firstAttribute="bottom" secondItem="iRS-Zl-2wz" secondAttribute="bottom" id="FVa-ft-acc"/>
                             <constraint firstItem="2Td-KJ-cQi" firstAttribute="leading" secondItem="v1M-od-lha" secondAttribute="leading" constant="10" id="TvH-56-9Hv"/>
-                            <constraint firstItem="iRS-Zl-2wz" firstAttribute="trailing" secondItem="ogO-hf-eQ8" secondAttribute="trailing" constant="16" id="UDN-p4-VeW"/>
                             <constraint firstItem="lXU-tV-e6q" firstAttribute="leading" secondItem="iRS-Zl-2wz" secondAttribute="leading" id="XF3-ms-fQE"/>
+                            <constraint firstItem="lXU-tV-e6q" firstAttribute="top" secondItem="iRS-Zl-2wz" secondAttribute="top" id="del-Ky-yyW"/>
                             <constraint firstAttribute="trailing" secondItem="2Td-KJ-cQi" secondAttribute="trailing" constant="10" id="fKh-Rm-ZcN"/>
-                            <constraint firstItem="lXU-tV-e6q" firstAttribute="top" secondItem="ogO-hf-eQ8" secondAttribute="bottom" constant="8" id="vmB-Az-57F"/>
                         </constraints>
                     </view>
                     <connections>

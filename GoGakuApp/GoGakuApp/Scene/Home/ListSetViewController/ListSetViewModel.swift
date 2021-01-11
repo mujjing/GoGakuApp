@@ -10,8 +10,8 @@ import UIKit
 class ListSetViewModel: NSObject {
     
     var dummy: [dummyData] = [
-        dummyData(image: UIImage(named: "sample1"), name: "Lolep"),
-        dummyData(image: UIImage(named: "sample2"), name: "sample2"),
+        dummyData(image: UIImage(named: "ICON1"), name: "Lolep"),
+        dummyData(image: UIImage(named: "ICON2"), name: "sample2"),
     ]
     
 }

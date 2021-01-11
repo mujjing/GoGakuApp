@@ -26,6 +26,7 @@ extension ListSetViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionViewCellUI()
+        self.title = "学習セットリスト"
         view.backgroundColor = UIColor.background
 
     }

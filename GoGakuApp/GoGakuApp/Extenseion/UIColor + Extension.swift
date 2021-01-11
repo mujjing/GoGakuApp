@@ -24,5 +24,11 @@ extension UIColor {
     static var startButtonEndLayer: UIColor {
         return UIColor(red: 235.0 / 255.0, green: 60.0 / 255.0, blue: 109.0/255.0, alpha: 1.0)
     }
+    static var wordCellViewStartLayer: UIColor {
+        return UIColor(red: 181.0 / 255.0, green: 206.0 / 255.0, blue: 223.0/255.0, alpha: 1.0)
+    }
+    static var wordCellViewEndLayer: UIColor {
+        return UIColor(red: 238.0 / 255.0, green: 245.0 / 255.0, blue: 251.0/255.0, alpha: 1.0)
+    }
     
 }
