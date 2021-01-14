@@ -17,4 +17,8 @@ struct GOGAKUConst {
         6 : "金",
         7 : "土",
     ]
+    static let goGakuStudyCardFrontLabel = "タップして意味を確認！"
+    static let goGakuStudyCardBehindLabel = "タップして単語を確認！"
+    static let goGakuSetTitleErrorAlertMessage = "タイトル必ず入力してください"
+    static let goGakuSetWordErrorAlertMessage = "単語と意味を必ず入力してください"
 }

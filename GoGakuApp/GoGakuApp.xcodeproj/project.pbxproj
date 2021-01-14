@@ -15,6 +15,13 @@
 		A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32879B225AB3EFD00172530 /* HomeViewController.swift */; };
 		A32879B725AB3F4500172530 /* InitialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32879B625AB3F4500172530 /* InitialViewController.storyboard */; };
 		A32879BA25AB3F5100172530 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32879B925AB3F5100172530 /* InitialViewController.swift */; };
+		A349666525B0220C006A03A5 /* ListStudyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A349666425B0220C006A03A5 /* ListStudyViewController.storyboard */; };
+		A349666825B0221F006A03A5 /* ListStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349666725B0221F006A03A5 /* ListStudyViewController.swift */; };
+		A349666B25B02371006A03A5 /* ListStudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349666A25B02371006A03A5 /* ListStudyCollectionViewCell.swift */; };
+		A349666E25B02380006A03A5 /* ListStudyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349666D25B02380006A03A5 /* ListStudyCoordinator.swift */; };
+		A349667125B0238D006A03A5 /* ListStudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349667025B0238D006A03A5 /* ListStudyViewModel.swift */; };
+		A349667D25B0307A006A03A5 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = A349667C25B0307A006A03A5 /* iCarousel.m */; };
+		A349668025B030A1006A03A5 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349667F25B030A1006A03A5 /* UPCarouselFlowLayout.swift */; };
 		A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BBA25AB42850075AD18 /* Coordinator.swift */; };
 		A39B1BBF25AB428E0075AD18 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */; };
 		A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */; };
@@ -53,6 +60,15 @@
 		A32879B225AB3EFD00172530 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A32879B625AB3F4500172530 /* InitialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialViewController.storyboard; sourceTree = "<group>"; };
 		A32879B925AB3F5100172530 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		A349666425B0220C006A03A5 /* ListStudyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListStudyViewController.storyboard; sourceTree = "<group>"; };
+		A349666725B0221F006A03A5 /* ListStudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStudyViewController.swift; sourceTree = "<group>"; };
+		A349666A25B02371006A03A5 /* ListStudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStudyCollectionViewCell.swift; sourceTree = "<group>"; };
+		A349666D25B02380006A03A5 /* ListStudyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStudyCoordinator.swift; sourceTree = "<group>"; };
+		A349667025B0238D006A03A5 /* ListStudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStudyViewModel.swift; sourceTree = "<group>"; };
+		A349667A25B03079006A03A5 /* GoGakuApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoGakuApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		A349667B25B0307A006A03A5 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		A349667C25B0307A006A03A5 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		A349667F25B030A1006A03A5 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		A39B1BBA25AB42850075AD18 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -174,6 +190,7 @@
 		A32879AD25AB34E800172530 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A349666325B021EB006A03A5 /* ListStudyViewController */,
 				A39B1BF525AB7FB20075AD18 /* ListAddViewController */,
 				A39B1BC525AB44680075AD18 /* ListDetailViewController */,
 				A39B1BC425AB445C0075AD18 /* ListSetViewController */,
@@ -199,6 +216,38 @@
 				A32879B925AB3F5100172530 /* InitialViewController.swift */,
 			);
 			path = initial;
+			sourceTree = "<group>";
+		};
+		A349666325B021EB006A03A5 /* ListStudyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A349667825B03053006A03A5 /* Parts */,
+				A349666425B0220C006A03A5 /* ListStudyViewController.storyboard */,
+				A349666725B0221F006A03A5 /* ListStudyViewController.swift */,
+				A349666A25B02371006A03A5 /* ListStudyCollectionViewCell.swift */,
+				A349666D25B02380006A03A5 /* ListStudyCoordinator.swift */,
+				A349667025B0238D006A03A5 /* ListStudyViewModel.swift */,
+			);
+			path = ListStudyViewController;
+			sourceTree = "<group>";
+		};
+		A349667825B03053006A03A5 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				A349667925B03059006A03A5 /* Carousel */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		A349667925B03059006A03A5 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				A349667B25B0307A006A03A5 /* iCarousel.h */,
+				A349667C25B0307A006A03A5 /* iCarousel.m */,
+				A349667A25B03079006A03A5 /* GoGakuApp-Bridging-Header.h */,
+				A349667F25B030A1006A03A5 /* UPCarouselFlowLayout.swift */,
+			);
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 		A39B1BB825AB41FF0075AD18 /* Setting */ = {
@@ -306,6 +355,7 @@
 				TargetAttributes = {
 					A328799125AB33DC00172530 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -337,6 +387,7 @@
 				A39B1BF725AB7FC60075AD18 /* ListAddViewController.storyboard in Resources */,
 				A32879B725AB3F4500172530 /* InitialViewController.storyboard in Resources */,
 				A328799F25AB33DD00172530 /* Assets.xcassets in Resources */,
+				A349666525B0220C006A03A5 /* ListStudyViewController.storyboard in Resources */,
 				A39B1BCD25AB44B20075AD18 /* ListDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,12 +449,16 @@
 				A328799625AB33DC00172530 /* AppDelegate.swift in Sources */,
 				A39B1C0025AB88B90075AD18 /* Calendar + Extension.swift in Sources */,
 				A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */,
+				A349667D25B0307A006A03A5 /* iCarousel.m in Sources */,
+				A349666E25B02380006A03A5 /* ListStudyCoordinator.swift in Sources */,
 				A39B1BEE25AB79710075AD18 /* ListSetViewModel.swift in Sources */,
 				A39B1BF125AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift in Sources */,
 				A328799825AB33DC00172530 /* SceneDelegate.swift in Sources */,
 				A39B1BCA25AB449E0075AD18 /* ListSetViewController.swift in Sources */,
+				A349668025B030A1006A03A5 /* UPCarouselFlowLayout.swift in Sources */,
 				A39B1BFD25AB80330075AD18 /* ListAddCoordinator.swift in Sources */,
 				A3A6ACF025AC341A0081F6EB /* ListAddViewModel.swift in Sources */,
+				A349666825B0221F006A03A5 /* ListStudyViewController.swift in Sources */,
 				A3A6ACF625AC87AB0081F6EB /* GradientView.swift in Sources */,
 				A3A6ACEC25AC2ED50081F6EB /* ListAddTableViewCell.swift in Sources */,
 				A39B1BD025AB44BA0075AD18 /* ListDetailViewController.swift in Sources */,
@@ -413,6 +468,8 @@
 				A3EABFFB25B005390044DC5E /* ButtonGradientView.swift in Sources */,
 				A39B1BFA25AB7FD60075AD18 /* ListAddViewController.swift in Sources */,
 				A39B1BE125AB562F0075AD18 /* UIColor + Extension.swift in Sources */,
+				A349666B25B02371006A03A5 /* ListStudyCollectionViewCell.swift in Sources */,
+				A349667125B0238D006A03A5 /* ListStudyViewModel.swift in Sources */,
 				A3EABFF725AFF57F0044DC5E /* ListDetailTableViewCell.swift in Sources */,
 				A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */,
 				A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */,
@@ -544,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RMQMMDFU8P;
 				INFOPLIST_FILE = GoGakuApp/Info.plist;
@@ -553,6 +611,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jh.GoGakuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoGakuApp/Scene/Home/ListStudyViewController/Parts/Carousel/GoGakuApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -564,6 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RMQMMDFU8P;
 				INFOPLIST_FILE = GoGakuApp/Info.plist;
@@ -573,6 +634,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jh.GoGakuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoGakuApp/Scene/Home/ListStudyViewController/Parts/Carousel/GoGakuApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

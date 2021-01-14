@@ -31,6 +31,7 @@ extension ListDetailViewController {
     func initView() {
         configUI()
         buttonStyle()
+        buttonAction()
     }
     
     func configUI() {
@@ -57,6 +58,19 @@ extension ListDetailViewController {
         detailButtonView.layer.shadowRadius = 2
         detailButtonView.layer.shadowOpacity = 0.2
         detailButtonView.layer.shadowOffset = CGSize(width: 3, height: 3)
+    }
+}
+//MARK: Action
+extension ListDetailViewController {
+    func buttonAction() {
+        detailButton.addTarget(self, action: #selector(tappedDetailButton), for: .touchUpInside)
+    }
+    @objc func tappedDetailButton() {
+        let storyBoard = UIStoryboard(name: "ListStudyViewController", bundle: Bundle.main)
+        guard let ListStudyVC = storyBoard.instantiateViewController(identifier: "ListStudyViewController") as? ListStudyViewController else { return }
+        ListStudyVC.modalPresentationStyle = .fullScreen
+        ListStudyVC.paramTitle = paramTitle
+        present(ListStudyVC, animated: true, completion: nil)
     }
 }
 

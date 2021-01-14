@@ -112,7 +112,7 @@ extension ListAddViewController {
 extension ListAddViewController {
     @objc func tappedSaveButton() {
         if (tag == 0 && titleTextField.text == "") || (tag == 1 && titleTextField.text == "") {
-            let alertC = UIAlertController(title: "", message: "タイトル必ず入力してください", preferredStyle: .alert)
+            let alertC = UIAlertController(title: "", message: GOGAKUConst.goGakuSetTitleErrorAlertMessage, preferredStyle: .alert)
             let alertA = UIAlertAction(title: "確認", style: .default, handler: nil)
             alertC.addAction(alertA)
             present(alertC, animated: true, completion: nil)
@@ -123,7 +123,7 @@ extension ListAddViewController {
     
     @objc func tappedWordSaveButton() {
         if (wordTextField.text == "" && meanTextField.text == "") || (wordTextField.text == "") || (meanTextField.text == "") {
-            let alertC = UIAlertController(title: "", message: "単語と意味を必ず入力してください", preferredStyle: .alert)
+            let alertC = UIAlertController(title: "", message: GOGAKUConst.goGakuSetWordErrorAlertMessage, preferredStyle: .alert)
             let alertA = UIAlertAction(title: "確認", style: .default, handler: nil)
             alertC.addAction(alertA)
             present(alertC, animated: true, completion: nil)
