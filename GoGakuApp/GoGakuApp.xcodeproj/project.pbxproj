@@ -38,6 +38,8 @@
 		A3A6ACF025AC341A0081F6EB /* ListAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6ACEF25AC341A0081F6EB /* ListAddViewModel.swift */; };
 		A3A6ACF325AC84610081F6EB /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6ACF225AC84610081F6EB /* UIView + Extension.swift */; };
 		A3A6ACF625AC87AB0081F6EB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6ACF525AC87AB0081F6EB /* GradientView.swift */; };
+		A3EABFF725AFF57F0044DC5E /* ListDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EABFF625AFF57F0044DC5E /* ListDetailTableViewCell.swift */; };
+		A3EABFFB25B005390044DC5E /* ButtonGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EABFFA25B005390044DC5E /* ButtonGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		A3A6ACEF25AC341A0081F6EB /* ListAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddViewModel.swift; sourceTree = "<group>"; };
 		A3A6ACF225AC84610081F6EB /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		A3A6ACF525AC87AB0081F6EB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A3EABFF625AFF57F0044DC5E /* ListDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A3EABFFA25B005390044DC5E /* ButtonGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradientView.swift; sourceTree = "<group>"; };
 		B3DF3A6458E1783366C550E3 /* Pods-GoGakuApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGakuApp.release.xcconfig"; path = "Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp.release.xcconfig"; sourceTree = "<group>"; };
 		DA04BBB71660C5641BCFF3B3 /* Pods-GoGakuApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGakuApp.debug.xcconfig"; path = "Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +159,7 @@
 				A39B1BFF25AB88B90075AD18 /* Calendar + Extension.swift */,
 				A3A6ACF225AC84610081F6EB /* UIView + Extension.swift */,
 				A3A6ACF525AC87AB0081F6EB /* GradientView.swift */,
+				A3EABFFA25B005390044DC5E /* ButtonGradientView.swift */,
 			);
 			path = Extenseion;
 			sourceTree = "<group>";
@@ -220,11 +225,11 @@
 			isa = PBXGroup;
 			children = (
 				A39B1BC625AB448E0075AD18 /* ListSetViewController.storyboard */,
+				A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */,
 				A39B1BEA25AB78F10075AD18 /* ListSetCollectionViewCell.swift */,
 				A39B1BF025AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift */,
 				A39B1BD225AB44D00075AD18 /* ListSetCoordinator.swift */,
 				A39B1BED25AB79710075AD18 /* ListSetViewModel.swift */,
-				A39B1BC925AB449E0075AD18 /* ListSetViewController.swift */,
 			);
 			path = ListSetViewController;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				A39B1BCC25AB44B20075AD18 /* ListDetailViewController.storyboard */,
 				A39B1BCF25AB44BA0075AD18 /* ListDetailViewController.swift */,
 				A39B1BD525AB44E00075AD18 /* ListDetailCoordinator.swift */,
+				A3EABFF625AFF57F0044DC5E /* ListDetailTableViewCell.swift */,
 			);
 			path = ListDetailViewController;
 			sourceTree = "<group>";
@@ -404,8 +410,10 @@
 				A39B1C0425AB89060075AD18 /* GOGAKUConst.swift in Sources */,
 				A39B1BEB25AB78F10075AD18 /* ListSetCollectionViewCell.swift in Sources */,
 				A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */,
+				A3EABFFB25B005390044DC5E /* ButtonGradientView.swift in Sources */,
 				A39B1BFA25AB7FD60075AD18 /* ListAddViewController.swift in Sources */,
 				A39B1BE125AB562F0075AD18 /* UIColor + Extension.swift in Sources */,
+				A3EABFF725AFF57F0044DC5E /* ListDetailTableViewCell.swift in Sources */,
 				A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */,
 				A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */,
 			);

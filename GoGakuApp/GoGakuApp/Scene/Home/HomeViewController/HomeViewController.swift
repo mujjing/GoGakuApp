@@ -12,7 +12,8 @@ class HomeViewController: UIViewController {
 
     var coordinator : HomeViewControllerFlow?
     @IBOutlet weak var studySetListButton: EMTNeumorphicButton!
-    @IBOutlet weak var randomStartView: EMTNeumorphicView!
+    @IBOutlet weak var randomStartsubView: GradientView!
+    @IBOutlet weak var randomStartView: GradientView!
     @IBOutlet weak var startButtonView: EMTNeumorphicView!
     
     
@@ -53,16 +54,9 @@ extension HomeViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "D-day", style: .done, target: self, action: #selector(tappedNavigationBarButton(_:)))
     }
 
-    
     func randomStartViewLayer() {
-        randomStartView.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
-        randomStartView.neumorphicLayer?.cornerRadius = 80
-        randomStartView.neumorphicLayer?.depthType = .concave
-        randomStartView.neumorphicLayer?.elementDepth = 50
-        randomStartView.neumorphicLayer?.lightShadowOpacity = 30
-        randomStartView.neumorphicLayer?.darkShadowOpacity = 20
-        randomStartView.neumorphicLayer?.elementColor = UIColor.background.cgColor
-        randomStartView.neumorphicLayer?.edged = true
+        randomStartView.layer.cornerRadius = randomStartView.frame.height / 2
+        randomStartsubView.layer.cornerRadius = randomStartsubView.frame.height / 2
     }
     func studySetListButtonLayer() {
         studySetListButton.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
@@ -79,7 +73,6 @@ extension HomeViewController {
         startButtonView.neumorphicLayer?.depthType = .convex
         startButtonView.neumorphicLayer?.elementDepth = 30
         startButtonView.neumorphicLayer?.lightShadowOpacity = 10
-        randomStartView.neumorphicLayer?.darkShadowOpacity = 5
         startButtonView.neumorphicLayer?.edged = true
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.colors = [UIColor.startButtonStartLayer.cgColor, UIColor.startButtonEndLayer.cgColor]

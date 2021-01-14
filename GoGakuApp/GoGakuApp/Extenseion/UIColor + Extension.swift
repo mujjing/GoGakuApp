@@ -30,5 +30,8 @@ extension UIColor {
     static var wordCellViewEndLayer: UIColor {
         return UIColor(red: 238.0 / 255.0, green: 245.0 / 255.0, blue: 251.0/255.0, alpha: 1.0)
     }
+    static var lineViewLayer: UIColor {
+        return UIColor(red: 228.0 / 255.0, green: 239.0 / 255.0, blue: 248.0/255.0, alpha: 1.0)
+    }
     
 }

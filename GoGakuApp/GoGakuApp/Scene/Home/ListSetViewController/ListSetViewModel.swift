@@ -10,13 +10,13 @@ import UIKit
 class ListSetViewModel: NSObject {
     
     var dummy: [dummyData] = [
-        dummyData(image: UIImage(named: "ICON1"), name: "Lolep"),
-        dummyData(image: UIImage(named: "ICON2"), name: "sample2"),
+        dummyData(image: "ICON1", name: "Lolep"),
+        dummyData(image: "ICON2", name: "sample2"),
     ]
     
 }
 
 struct dummyData {
-    let image : UIImage?
+    let image : String?
     let name : String
 }

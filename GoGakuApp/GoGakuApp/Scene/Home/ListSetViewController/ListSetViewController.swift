@@ -62,7 +62,11 @@ extension ListSetViewController : UICollectionViewDelegate, UICollectionViewData
     func tappedCategoryCell(indexPath: IndexPath, type: String) {
         switch type {
         case "categoryCell":
-            coordinator?.coordinateToListDetailVC()
+            let storyBoard = UIStoryboard(name: "ListDetailViewController", bundle: Bundle.main)
+            guard let ListDetailVC = storyBoard.instantiateViewController(identifier: "ListDetailViewController") as? ListDetailViewController else { return }
+            ListDetailVC.paramTitle = viewModel.dummy[indexPath.row].name
+            ListDetailVC.paramImageName = viewModel.dummy[indexPath.row].image
+            navigationController?.pushViewController(ListDetailVC, animated: true)
         default:
             break
         }
@@ -79,10 +83,17 @@ extension ListSetViewController : UICollectionViewDelegate, UICollectionViewData
             }
         }
     func setupListCell(cell: ListSetCollectionViewCell, indexPath: IndexPath) {
-        cell.listImage.image = viewModel.dummy[indexPath.row].image
+        cell.listImage.image = UIImage(named: viewModel.dummy[indexPath.row].image ?? "") 
         cell.listLabel.text = viewModel.dummy[indexPath.row].name
         cell.listImage.layer.cornerRadius = 10
-        cell.backgroundColor = UIColor.background
+        cell.belowView.layer.cornerRadius = 10
+        cell.belowView.layer.borderColor = UIColor.lineViewLayer.cgColor
+        cell.belowView.layer.borderWidth = 1
+        cell.aboveView.layer.cornerRadius = 10
+        cell.aboveView.layer.borderColor = UIColor.lineViewLayer.cgColor
+        cell.aboveView.layer.borderWidth = 1
+        cell.aboveView.layer.backgroundColor = UIColor.background.cgColor
+        cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = false
         cell.layer.borderWidth = 0.0
