@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xlX-Hi-4oQ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xlX-Hi-4oQ">
                                 <rect key="frame" x="0.0" y="79" width="375" height="445"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vts-vU-5yS">
@@ -37,7 +37,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCj-1B-9K7" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="234" height="350"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KH-O7-P9g">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KH-O7-P9g" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="314" width="234" height="36"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップして意味を確認！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-dj-eUn">
@@ -46,8 +46,8 @@
                                                                         <constraint firstAttribute="height" constant="21" id="i4j-0P-S2L"/>
                                                                         <constraint firstAttribute="width" constant="218" id="pvT-Pt-VX9"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -60,6 +60,14 @@
                                                                 <constraint firstAttribute="trailing" secondItem="JJv-dj-eUn" secondAttribute="trailing" constant="8" id="n4l-xR-3ua"/>
                                                                 <constraint firstAttribute="width" constant="234" id="ygW-FC-ofL"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                                    <color key="value" red="0.96862745098039216" green="0.792156862745098" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                                    <color key="value" red="0.92156862745098034" green="0.23529411764705882" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-je-SgD">
                                                             <rect key="frame" x="27" y="150" width="180" height="50"/>
@@ -130,31 +138,53 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZZ-Au-547" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="544" width="343" height="55"/>
+                                <rect key="frame" x="77" y="551" width="220" height="55"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-IL-7Bo">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                        <state key="normal" title="学習終了">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o16-YJ-8Ok" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="200" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-IL-7Bo">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <state key="normal" title="学習終了">
+                                                    <color key="titleColor" red="0.17254901960784313" green="0.25882352941176467" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="sC1-IL-7Bo" firstAttribute="top" secondItem="o16-YJ-8Ok" secondAttribute="top" id="0OG-8t-VPu"/>
+                                            <constraint firstAttribute="bottom" secondItem="sC1-IL-7Bo" secondAttribute="bottom" id="5Lz-xV-ZRt"/>
+                                            <constraint firstAttribute="width" constant="200" id="cDx-SP-q2p"/>
+                                            <constraint firstAttribute="trailing" secondItem="sC1-IL-7Bo" secondAttribute="trailing" id="dQ2-Mi-o4B"/>
+                                            <constraint firstItem="sC1-IL-7Bo" firstAttribute="leading" secondItem="o16-YJ-8Ok" secondAttribute="leading" id="vB9-sW-khw"/>
+                                            <constraint firstAttribute="height" constant="35" id="xyk-Qs-vaC"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="sC1-IL-7Bo" firstAttribute="leading" secondItem="EZZ-Au-547" secondAttribute="leading" id="FJn-If-p5h"/>
-                                    <constraint firstAttribute="bottom" secondItem="sC1-IL-7Bo" secondAttribute="bottom" id="Pgt-hc-Bj9"/>
-                                    <constraint firstItem="sC1-IL-7Bo" firstAttribute="top" secondItem="EZZ-Au-547" secondAttribute="top" id="Vza-iI-oq7"/>
-                                    <constraint firstAttribute="width" constant="343" id="WjI-yQ-nmX"/>
+                                    <constraint firstItem="o16-YJ-8Ok" firstAttribute="leading" secondItem="EZZ-Au-547" secondAttribute="leading" constant="10" id="4mZ-g7-QSq"/>
+                                    <constraint firstItem="o16-YJ-8Ok" firstAttribute="top" secondItem="EZZ-Au-547" secondAttribute="top" constant="10" id="G6H-xd-DnE"/>
+                                    <constraint firstAttribute="width" constant="220" id="WjI-yQ-nmX"/>
                                     <constraint firstAttribute="height" constant="55" id="aIE-Je-jLE"/>
-                                    <constraint firstAttribute="trailing" secondItem="sC1-IL-7Bo" secondAttribute="trailing" id="mf6-DQ-PE4"/>
+                                    <constraint firstAttribute="trailing" secondItem="o16-YJ-8Ok" secondAttribute="trailing" constant="10" id="eUX-SP-DgB"/>
+                                    <constraint firstAttribute="bottom" secondItem="o16-YJ-8Ok" secondAttribute="bottom" constant="10" id="gT7-VX-L4w"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.96862745098039216" green="0.792156862745098" blue="0.33725490196078434" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.92156862745098034" green="0.23529411764705882" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -165,11 +195,11 @@
                             <constraint firstItem="xlX-Hi-4oQ" firstAttribute="leading" secondItem="edn-uu-bFe" secondAttribute="leading" id="AVm-UK-0rt"/>
                             <constraint firstItem="xlX-Hi-4oQ" firstAttribute="top" secondItem="edn-uu-bFe" secondAttribute="top" constant="79" id="Ajv-Cr-5Y8"/>
                             <constraint firstItem="XX6-Jv-Woh" firstAttribute="leading" secondItem="edn-uu-bFe" secondAttribute="leading" constant="8" id="I1U-oV-Dm5"/>
-                            <constraint firstItem="edn-uu-bFe" firstAttribute="trailing" secondItem="EZZ-Au-547" secondAttribute="trailing" constant="16" id="JBK-M1-g1u"/>
+                            <constraint firstItem="edn-uu-bFe" firstAttribute="trailing" secondItem="EZZ-Au-547" secondAttribute="trailing" constant="78" id="JBK-M1-g1u"/>
                             <constraint firstItem="xlX-Hi-4oQ" firstAttribute="trailing" secondItem="edn-uu-bFe" secondAttribute="trailing" id="LcB-uk-WJe"/>
-                            <constraint firstItem="EZZ-Au-547" firstAttribute="leading" secondItem="edn-uu-bFe" secondAttribute="leading" constant="16" id="bZF-ZS-XgO"/>
+                            <constraint firstItem="EZZ-Au-547" firstAttribute="leading" secondItem="edn-uu-bFe" secondAttribute="leading" constant="77" id="bZF-ZS-XgO"/>
                             <constraint firstItem="XX6-Jv-Woh" firstAttribute="top" secondItem="edn-uu-bFe" secondAttribute="top" constant="20" id="e4P-Mn-mxs"/>
-                            <constraint firstItem="EZZ-Au-547" firstAttribute="top" secondItem="xlX-Hi-4oQ" secondAttribute="bottom" constant="20" id="tsN-a4-0rj"/>
+                            <constraint firstItem="EZZ-Au-547" firstAttribute="top" secondItem="xlX-Hi-4oQ" secondAttribute="bottom" constant="27" id="tsN-a4-0rj"/>
                             <constraint firstItem="xlX-Hi-4oQ" firstAttribute="bottom" secondItem="edn-uu-bFe" secondAttribute="bottom" constant="-143" id="vvn-Rt-PhO"/>
                             <constraint firstItem="edn-uu-bFe" firstAttribute="trailing" secondItem="XX6-Jv-Woh" secondAttribute="trailing" constant="8" id="yxr-Gt-hei"/>
                         </constraints>
@@ -177,6 +207,7 @@
                     <connections>
                         <outlet property="collectionView" destination="xlX-Hi-4oQ" id="dOF-k2-aTU"/>
                         <outlet property="dismissButton" destination="sC1-IL-7Bo" id="4pO-bX-Bti"/>
+                        <outlet property="dismissButtonSubView" destination="o16-YJ-8Ok" id="rRO-ah-Dcq"/>
                         <outlet property="dismissButtonView" destination="EZZ-Au-547" id="DMb-ey-O2B"/>
                         <outlet property="titleLabel" destination="XX6-Jv-Woh" id="rit-Ju-RFt"/>
                     </connections>

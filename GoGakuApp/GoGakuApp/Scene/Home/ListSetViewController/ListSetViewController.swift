@@ -17,7 +17,10 @@ class ListSetViewController: UIViewController {
 
         initView()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        listSetData()
+        debugPrint("papapapa \(viewModel.list.count)")
+    }
 }
 
 //init
@@ -42,20 +45,37 @@ extension ListSetViewController {
     }
 }
 
+//MARK: model
+extension ListSetViewController {
+    func listSetData() {
+        let request = ListSetRequest()
+        let _ = try? GoGakuHttpClient.default.send(request).onSuccess { [weak self] response in
+            if let list = response.body.data {
+                self?.viewModel.list = list
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
+            }
+        }.onError { error in
+            debugPrint("list set error: \(error)")
+        }
+    }
+}
+
 extension ListSetViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.dummy.count + 1
+        return viewModel.list.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellID = indexPath.row < viewModel.dummy.count ? "categoryCell" : "addButtonCell"
+        let cellID = indexPath.row < viewModel.list.count ? "categoryCell" : "addButtonCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
         setupCell(cell: cell, indexPath: indexPath, type: cellID)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cellID = indexPath.row < viewModel.dummy.count ? "categoryCell" : "addButtonCell"
+        let cellID = indexPath.row < viewModel.list.count ? "categoryCell" : "addButtonCell"
         tappedCategoryCell(indexPath: indexPath, type: cellID)
     }
     
@@ -64,8 +84,8 @@ extension ListSetViewController : UICollectionViewDelegate, UICollectionViewData
         case "categoryCell":
             let storyBoard = UIStoryboard(name: "ListDetailViewController", bundle: Bundle.main)
             guard let ListDetailVC = storyBoard.instantiateViewController(identifier: "ListDetailViewController") as? ListDetailViewController else { return }
-            ListDetailVC.paramTitle = viewModel.dummy[indexPath.row].name
-            ListDetailVC.paramImageName = viewModel.dummy[indexPath.row].image
+            ListDetailVC.paramTitle = viewModel.list[indexPath.row].title
+            ListDetailVC.paramImageName = viewModel.list[indexPath.row].image
             navigationController?.pushViewController(ListDetailVC, animated: true)
         default:
             break
@@ -83,8 +103,8 @@ extension ListSetViewController : UICollectionViewDelegate, UICollectionViewData
             }
         }
     func setupListCell(cell: ListSetCollectionViewCell, indexPath: IndexPath) {
-        cell.listImage.image = UIImage(named: viewModel.dummy[indexPath.row].image ?? "") 
-        cell.listLabel.text = viewModel.dummy[indexPath.row].name
+        cell.listImage.image = UIImage(named: viewModel.list[indexPath.row].image )
+        cell.listLabel.text = viewModel.list[indexPath.row].title
         cell.listImage.layer.cornerRadius = 10
         cell.belowView.layer.cornerRadius = 10
         cell.belowView.layer.borderColor = UIColor.lineViewLayer.cgColor

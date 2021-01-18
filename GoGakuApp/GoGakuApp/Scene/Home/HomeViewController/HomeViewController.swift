@@ -10,8 +10,10 @@ import EMTNeumorphicView
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var studySetListButtonView: GradientView!
+    @IBOutlet weak var studySetListButtonSubView: GradientView!
     var coordinator : HomeViewControllerFlow?
-    @IBOutlet weak var studySetListButton: EMTNeumorphicButton!
+    @IBOutlet weak var studySetListButton: UIButton!
     @IBOutlet weak var randomStartsubView: GradientView!
     @IBOutlet weak var randomStartView: GradientView!
     @IBOutlet weak var startButtonView: EMTNeumorphicView!
@@ -59,14 +61,10 @@ extension HomeViewController {
         randomStartsubView.layer.cornerRadius = randomStartsubView.frame.height / 2
     }
     func studySetListButtonLayer() {
-        studySetListButton.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
-        studySetListButton.neumorphicLayer?.cornerRadius = studySetListButton.frame.height / 2
-        studySetListButton.neumorphicLayer?.depthType = .convex
-        studySetListButton.neumorphicLayer?.elementDepth = 15
-        studySetListButton.neumorphicLayer?.lightShadowOpacity = 10
-        studySetListButton.neumorphicLayer?.darkShadowOpacity = 5
-        studySetListButton.neumorphicLayer?.elementColor = UIColor.background.cgColor
-        studySetListButton.neumorphicLayer?.edged = true
+        studySetListButtonView.layer.cornerRadius = studySetListButtonView.frame.height / 2
+        studySetListButtonSubView.layer.cornerRadius = studySetListButtonSubView.frame.height / 2
+        studySetListButton.layer.cornerRadius = studySetListButton.frame.height / 2
+        
     }
     func startButtonLayer() {
         startButtonView.neumorphicLayer?.cornerRadius = startButtonView.frame.height / 2

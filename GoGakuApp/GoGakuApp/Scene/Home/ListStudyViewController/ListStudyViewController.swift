@@ -9,6 +9,7 @@ import UIKit
 
 class ListStudyViewController: UIViewController {
 
+    @IBOutlet weak var dismissButtonSubView: GradientView!
     @IBOutlet weak var dismissButtonView: GradientView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -20,6 +21,10 @@ class ListStudyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listSetData()
     }
 }
 
@@ -40,6 +45,7 @@ extension ListStudyViewController {
         flowLayout.spacingMode = .fixed(spacing: 5.0)
         collectionView.collectionViewLayout = flowLayout
         dismissButtonView.layer.cornerRadius = dismissButtonView.frame.height / 2
+        dismissButtonSubView.layer.cornerRadius = dismissButtonSubView.frame.height / 2
     }
     func buttonEvent() {
         dismissButton.addTarget(self, action: #selector(tappedDismissButton), for: .touchUpInside)
@@ -49,19 +55,35 @@ extension ListStudyViewController {
     }
 }
 
+extension ListStudyViewController {
+    func listSetData() {
+        let request = ListSetRequest()
+        let _ = try? GoGakuHttpClient.default.send(request).onSuccess { [weak self] response in
+            if let list = response.body.data {
+                self?.viewModel.list = list
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
+            }
+        }.onError { error in
+            debugPrint("list set error: \(error)")
+        }
+    }
+}
+
 extension ListStudyViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.dummy.count
+        return viewModel.list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? ListStudyCollectionViewCell else { fatalError() }
-        cell.wordLabel.text = viewModel.dummy[indexPath.row].image ?? ""
-        cell.word = viewModel.dummy[indexPath.row].image ?? ""
-        cell.mean = viewModel.dummy[indexPath.row].name
+        cell.wordLabel.text = viewModel.list[indexPath.row].word
+        cell.word = viewModel.list[indexPath.row].word
+        cell.mean = viewModel.list[indexPath.row].mean
         cell.wordLabel.textColor = UIColor.labelNavy
         cell.cellStyle(cell: cell)
-        cell.taplabel.textColor = UIColor.labelNavy
+        cell.taplabel.textColor = UIColor.white
         return cell
     }
     

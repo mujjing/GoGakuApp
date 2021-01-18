@@ -13,6 +13,7 @@ class ListSetViewModel: NSObject {
         dummyData(image: "ICON1", name: "Lolep"),
         dummyData(image: "ICON2", name: "sample2"),
     ]
+    var list : [ListSet] = []
     
 }
 

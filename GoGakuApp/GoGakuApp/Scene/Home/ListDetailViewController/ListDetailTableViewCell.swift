@@ -9,6 +9,7 @@ import UIKit
 
 class ListDetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var wordView: GradientView!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var meanLabel: UILabel!
     

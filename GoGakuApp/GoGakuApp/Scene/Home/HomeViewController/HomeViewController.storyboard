@@ -128,37 +128,81 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZA-1W-NJw" customClass="EMTNeumorphicButton" customModule="EMTNeumorphicView">
-                                <rect key="frame" x="97" y="499.5" width="180" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-hR-agF" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
+                                <rect key="frame" x="97" y="486" width="180" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-7p-TtF" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="160" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZA-1W-NJw">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="160" id="UJ9-Dr-YD1"/>
+                                                    <constraint firstAttribute="height" constant="30" id="kS4-70-b5S"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                <color key="tintColor" red="0.85098039219999999" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="MY学習セットリスト">
+                                                    <color key="titleColor" red="0.16862745100000001" green="0.25098039220000001" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="gZA-1W-NJw" firstAttribute="top" secondItem="sWj-7p-TtF" secondAttribute="top" id="2r9-dT-86I"/>
+                                            <constraint firstAttribute="width" constant="160" id="JDC-DT-El2"/>
+                                            <constraint firstAttribute="trailing" secondItem="gZA-1W-NJw" secondAttribute="trailing" id="JZB-CA-Lab"/>
+                                            <constraint firstAttribute="bottom" secondItem="gZA-1W-NJw" secondAttribute="bottom" id="SDC-r2-75a"/>
+                                            <constraint firstItem="gZA-1W-NJw" firstAttribute="leading" secondItem="sWj-7p-TtF" secondAttribute="leading" id="Z4G-XN-wYD"/>
+                                            <constraint firstAttribute="height" constant="30" id="oZe-3f-48y"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LAA-3W-MEq"/>
-                                    <constraint firstAttribute="width" constant="180" id="mgs-0g-Tx1"/>
+                                    <constraint firstAttribute="height" constant="50" id="IQU-ev-rlz"/>
+                                    <constraint firstAttribute="trailing" secondItem="sWj-7p-TtF" secondAttribute="trailing" constant="10" id="a7L-7q-RaS"/>
+                                    <constraint firstAttribute="width" constant="180" id="gmb-RN-v9h"/>
+                                    <constraint firstItem="sWj-7p-TtF" firstAttribute="top" secondItem="07Y-hR-agF" secondAttribute="top" constant="10" id="jp8-Aq-SCs"/>
+                                    <constraint firstItem="sWj-7p-TtF" firstAttribute="leading" secondItem="07Y-hR-agF" secondAttribute="leading" constant="10" id="nyg-ca-9xp"/>
+                                    <constraint firstAttribute="bottom" secondItem="sWj-7p-TtF" secondAttribute="bottom" constant="10" id="z15-kf-DvC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <color key="tintColor" red="0.85098039219999999" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="MY学習セットリスト">
-                                    <color key="titleColor" red="0.16862745100000001" green="0.25098039220000001" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vMI-QJ-d3l"/>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.92941176470588238" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="07Y-hR-agF" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="97" id="2IF-e9-Cer"/>
                             <constraint firstItem="1UH-XA-ba1" firstAttribute="top" secondItem="vMI-QJ-d3l" secondAttribute="top" constant="20" id="8nM-xZ-n88"/>
                             <constraint firstItem="u3h-Yn-9HB" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="37" id="CNs-nq-Ixx"/>
                             <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="1UH-XA-ba1" secondAttribute="trailing" constant="16" id="DYg-Nk-yme"/>
                             <constraint firstItem="zyo-hi-WAe" firstAttribute="top" secondItem="KZF-v1-Go2" secondAttribute="bottom" constant="18" id="Ecv-f0-yrF"/>
-                            <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="gZA-1W-NJw" secondAttribute="trailing" constant="98" id="MwR-nz-Xet"/>
+                            <constraint firstItem="07Y-hR-agF" firstAttribute="top" secondItem="u3h-Yn-9HB" secondAttribute="bottom" constant="15" id="Oym-jZ-DaU"/>
                             <constraint firstItem="KZF-v1-Go2" firstAttribute="centerX" secondItem="8wk-Xa-2g8" secondAttribute="centerX" id="QYV-hs-Nzd"/>
                             <constraint firstItem="KZF-v1-Go2" firstAttribute="top" secondItem="GaP-1e-a3o" secondAttribute="bottom" constant="20" id="Qmd-GU-cp0"/>
                             <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="u3h-Yn-9HB" secondAttribute="trailing" constant="38" id="VfR-9Z-57d"/>
-                            <constraint firstItem="gZA-1W-NJw" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="97" id="ZJe-yJ-2L6"/>
-                            <constraint firstItem="gZA-1W-NJw" firstAttribute="top" secondItem="u3h-Yn-9HB" secondAttribute="bottom" constant="28.5" id="bPt-TC-Jl8"/>
                             <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="zyo-hi-WAe" secondAttribute="trailing" constant="38" id="bhe-c9-hlV"/>
                             <constraint firstItem="u3h-Yn-9HB" firstAttribute="top" secondItem="zyo-hi-WAe" secondAttribute="bottom" constant="8" symbolic="YES" id="iLd-vY-I9d"/>
                             <constraint firstItem="1UH-XA-ba1" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="16" id="l2y-DV-mD8"/>
                             <constraint firstItem="GaP-1e-a3o" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="16" id="miH-06-HL6"/>
+                            <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="07Y-hR-agF" secondAttribute="trailing" constant="98" id="pIE-pV-Ky2"/>
                             <constraint firstItem="zyo-hi-WAe" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="37" id="tq0-gL-Pz7"/>
                             <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="GaP-1e-a3o" secondAttribute="trailing" constant="16" id="twG-lb-RUq"/>
                             <constraint firstItem="GaP-1e-a3o" firstAttribute="top" secondItem="1UH-XA-ba1" secondAttribute="bottom" constant="8" symbolic="YES" id="ydI-ku-bmA"/>
@@ -169,6 +213,8 @@
                         <outlet property="randomStartsubView" destination="OIo-g3-wpW" id="TL3-Ie-5ga"/>
                         <outlet property="startButtonView" destination="Df5-tN-fhO" id="PKM-85-Po0"/>
                         <outlet property="studySetListButton" destination="gZA-1W-NJw" id="gCo-Vw-hpM"/>
+                        <outlet property="studySetListButtonSubView" destination="sWj-7p-TtF" id="2Uq-Jb-lVw"/>
+                        <outlet property="studySetListButtonView" destination="07Y-hR-agF" id="ZRc-YM-x7K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luH-v7-zcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

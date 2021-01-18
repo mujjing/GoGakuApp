@@ -11,6 +11,7 @@ import EMTNeumorphicView
 class ListDetailViewController: UIViewController {
 
     var coordinator : ListDetailViewControllerFlow?
+    var viewModel: ListDetailViewModel = ListDetailViewModel()
     @IBOutlet weak var detailButtongradientView: GradientView!
     @IBOutlet weak var imageUIView: UIView!
     @IBOutlet weak var image: UIImageView!
@@ -24,7 +25,10 @@ class ListDetailViewController: UIViewController {
         super.viewDidLoad()
         initView()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listSetData()
+    }
 }
 
 extension ListDetailViewController {
@@ -32,12 +36,13 @@ extension ListDetailViewController {
         configUI()
         buttonStyle()
         buttonAction()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func configUI() {
         view.backgroundColor = UIColor.background
         self.title = "セット詳細"
-        titleLabel.text = "\(paramTitle ?? "") - 2個の単語"
         titleLabel.textColor = UIColor.labelNavy
         image.image = UIImage(named: paramImageName ?? "")
         imageUIView.layer.cornerRadius = 20
@@ -60,30 +65,65 @@ extension ListDetailViewController {
         detailButtonView.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
 }
+//MARK: Model
+extension ListDetailViewController {
+    func listSetData() {
+        let request = ListSetRequest()
+        let _ = try? GoGakuHttpClient.default.send(request).onSuccess { [weak self] response in
+            if let list = response.body.data {
+                self?.viewModel.list = list
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                    self?.titleLabel.text = "\(self?.paramTitle ?? "") - \(self?.viewModel.list.count ?? 0)個の単語"
+                }
+            }
+        }.onError { error in
+            debugPrint("list set error: \(error)")
+        }
+    }
+}
+
 //MARK: Action
 extension ListDetailViewController {
     func buttonAction() {
         detailButton.addTarget(self, action: #selector(tappedDetailButton), for: .touchUpInside)
     }
     @objc func tappedDetailButton() {
-        let storyBoard = UIStoryboard(name: "ListStudyViewController", bundle: Bundle.main)
-        guard let ListStudyVC = storyBoard.instantiateViewController(identifier: "ListStudyViewController") as? ListStudyViewController else { return }
-        ListStudyVC.modalPresentationStyle = .fullScreen
-        ListStudyVC.paramTitle = paramTitle
-        present(ListStudyVC, animated: true, completion: nil)
+        let alertC = UIAlertController(title: "", message: "学習方法を選択してください", preferredStyle: .actionSheet)
+        let alertCard = UIAlertAction(title: "カード学習", style: .default) { (_) in
+            let storyBoard = UIStoryboard(name: "ListStudyViewController", bundle: Bundle.main)
+            guard let ListStudyVC = storyBoard.instantiateViewController(identifier: "ListStudyViewController") as? ListStudyViewController else { return }
+            ListStudyVC.modalPresentationStyle = .fullScreen
+            ListStudyVC.paramTitle = self.paramTitle
+            self.present(ListStudyVC, animated: true, completion: nil)
+        }
+        let alertQuiz = UIAlertAction(title: "クイズ学習", style: .default) { (_) in
+            debugPrint("quiz")
+        }
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alertC.addAction(alertCard)
+        alertC.addAction(alertQuiz)
+        alertC.addAction(cancel)
+        present(alertC, animated: true, completion: nil)
     }
 }
 
 extension ListDetailViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListDetailTableViewCell else { fatalError() }
-        
+        let data = viewModel.list[indexPath.row]
+        cell.wordLabel.text = data.word
+        cell.meanLabel.text = data.mean
+        cell.wordView.layer.cornerRadius = cell.wordView.frame.height / 2
+        cell.layer.cornerRadius = cell.frame.height / 2
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
     
 }
