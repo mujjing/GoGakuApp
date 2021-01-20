@@ -15,12 +15,12 @@ struct ListSetResponse: JsonType {
 // MARK: - Datum
 struct ListSet: JsonType {
     let id: Int
-    let title, content, image, word: String
-    let mean, createdAt, updatedAt: String
+    let title, image, createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, title, content, image, word, mean
+        case id, title, image
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
 }
+

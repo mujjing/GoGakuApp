@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         coordinator = AppCoordinator(window: window!)
         coordinator?.start()
-        
+        Thread.sleep(forTimeInterval: 1.0)
         return true
     }
 

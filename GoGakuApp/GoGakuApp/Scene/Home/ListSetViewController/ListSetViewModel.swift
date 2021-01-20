@@ -6,18 +6,24 @@
 //
 
 import UIKit
-
+import Alamofire
+import RxSwift
+import RxCocoa
 class ListSetViewModel: NSObject {
-    
-    var dummy: [dummyData] = [
-        dummyData(image: "ICON1", name: "Lolep"),
-        dummyData(image: "ICON2", name: "sample2"),
-    ]
+
     var list : [ListSet] = []
     
-}
-
-struct dummyData {
-    let image : String?
-    let name : String
+    func listDelete() -> Single<ListSetDeleteResponse> {
+        let request = ListSetDeleteRequest()
+        let task = GoGakuHttpClient.default.send(request)
+            .do(onSuccess: { response in
+                debugPrint("listSetDelete : \(response.data)")
+            })
+        .asObservable()
+        .share()
+        .asSingle()
+        task.subscribe().disposed(by: disposeBag)
+        return task
+    }
+    
 }

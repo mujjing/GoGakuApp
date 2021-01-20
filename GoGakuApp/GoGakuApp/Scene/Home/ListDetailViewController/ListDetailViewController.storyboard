@@ -21,23 +21,37 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEl-NX-Yen">
-                                        <rect key="frame" x="3" y="10" width="343" height="24"/>
+                                        <rect key="frame" x="3" y="10" width="251" height="24"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="bmn-Hv-1Ro"/>
+                                            <constraint firstAttribute="width" constant="251" id="bmn-Hv-1Ro"/>
                                             <constraint firstAttribute="height" constant="24" id="cDN-Gd-lRg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-Vw-GRy">
+                                        <rect key="frame" x="270" y="7" width="79" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="79" id="eNj-Wo-IoM"/>
+                                            <constraint firstAttribute="height" constant="30" id="kDZ-Ff-vdx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                        <state key="normal" title="単語追加">
+                                            <color key="titleColor" red="0.17254901959999999" green="0.25882352939999997" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="VEl-NX-Yen" firstAttribute="leading" secondItem="DfU-9G-8C8" secondAttribute="leading" constant="3" id="5GI-pR-9iC"/>
                                     <constraint firstItem="VEl-NX-Yen" firstAttribute="top" secondItem="DfU-9G-8C8" secondAttribute="top" constant="10" id="HhE-02-efx"/>
-                                    <constraint firstAttribute="trailing" secondItem="VEl-NX-Yen" secondAttribute="trailing" constant="3" id="ZqD-Z3-Qwc"/>
+                                    <constraint firstItem="tz3-Vw-GRy" firstAttribute="top" secondItem="DfU-9G-8C8" secondAttribute="top" constant="7" id="a6q-D3-o0P"/>
+                                    <constraint firstAttribute="trailing" secondItem="tz3-Vw-GRy" secondAttribute="trailing" id="am3-hw-8w0"/>
                                     <constraint firstAttribute="bottom" secondItem="VEl-NX-Yen" secondAttribute="bottom" constant="10" id="h6s-Ad-e7M"/>
+                                    <constraint firstAttribute="bottom" secondItem="tz3-Vw-GRy" secondAttribute="bottom" constant="7" id="l6c-v6-w4r"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-fx-jQa">
@@ -125,7 +139,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5zd-f0-kH6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5zd-f0-kH6">
                                 <rect key="frame" x="10" y="286" width="349" height="365"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="I98-FO-QEg">
@@ -195,6 +209,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="meanLabel" destination="n2c-Dp-FVb" id="A9G-lG-epr"/>
                                             <outlet property="wordLabel" destination="Pzv-ox-TaR" id="idK-tz-MTb"/>
@@ -228,6 +243,7 @@
                         <outlet property="imageUIView" destination="JOX-7n-FPo" id="9yx-St-1Ax"/>
                         <outlet property="tableView" destination="5zd-f0-kH6" id="soD-BI-uBN"/>
                         <outlet property="titleLabel" destination="VEl-NX-Yen" id="hck-ga-WbH"/>
+                        <outlet property="wordAddButton" destination="tz3-Vw-GRy" id="j8P-ly-0Qe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSq-aG-8gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

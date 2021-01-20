@@ -162,10 +162,10 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -181,10 +181,10 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

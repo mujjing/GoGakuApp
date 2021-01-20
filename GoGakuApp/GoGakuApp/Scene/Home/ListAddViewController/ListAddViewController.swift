@@ -10,38 +10,34 @@ import EMTNeumorphicView
 
 class ListAddViewController: UIViewController {
     
+    @IBOutlet weak var doneButton: EMTNeumorphicButton!
     @IBOutlet weak var wordSaveButton: EMTNeumorphicButton!
-    @IBOutlet weak var titleFieldView: UIView!
+    @IBOutlet weak var footerView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var meanFieldView: UIView!
     @IBOutlet weak var wordFieldView: UIView!
-    @IBOutlet weak var footerView: UIView!
-    @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var meanTextField: UITextField!
     @IBOutlet weak var wordTextField: UITextField!
-    @IBOutlet weak var categoryImage: UIImageView!
-    @IBOutlet weak var categorySelectButton: EMTNeumorphicButton!
-    @IBOutlet weak var saveButton: EMTNeumorphicButton!
-    @IBOutlet weak var tableView: UITableView!
     var coordinator : ListAddViewControllerFlow?
     var viewModel : ListAddViewModel = ListAddViewModel()
-    var tag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
 
 extension ListAddViewController {
     func initView() {
         configUI()
         buttonStyle()
-        shadowView()
         tableView.delegate = self
         tableView.dataSource = self
-        saveButton.addTarget(self, action: #selector(tappedSaveButton), for: .touchUpInside)
         wordSaveButton.addTarget(self, action: #selector(tappedWordSaveButton), for: .touchUpInside)
+        doneButton.addTarget(self, action: #selector(tappedDoneButton), for: .touchUpInside)
         self.title = "セット追加"
     }
     
@@ -50,27 +46,13 @@ extension ListAddViewController {
         view.backgroundColor = UIColor.background
         tableView.backgroundColor = UIColor.background
         footerView.layer.backgroundColor = UIColor.background.cgColor
-        titleTextField.layer.cornerRadius = titleTextField.frame.height / 2
+    }
+    
+    func buttonStyle() {
         meanTextField.layer.cornerRadius = meanTextField.frame.height / 2
         wordTextField.layer.cornerRadius = wordTextField.frame.height / 2
         wordFieldView.layer.cornerRadius = wordFieldView.frame.height / 2
         meanFieldView.layer.cornerRadius = meanFieldView.frame.height / 2
-        titleFieldView.layer.cornerRadius = titleFieldView.frame.height / 2
-    }
-    
-    func buttonStyle() {
-        saveButton.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
-        saveButton.neumorphicLayer?.cornerRadius = saveButton.frame.height / 2
-        saveButton.neumorphicLayer?.depthType = .convex
-        saveButton.neumorphicLayer?.elementDepth = 15
-        saveButton.neumorphicLayer?.lightShadowOpacity = 10
-        saveButton.layer.masksToBounds = false
-        saveButton.layer.borderWidth = 0.0
-        saveButton.layer.shadowColor = UIColor.black.cgColor
-        saveButton.layer.shadowRadius = 2
-        saveButton.layer.shadowOpacity = 0.2
-        saveButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-        
         wordSaveButton.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
         wordSaveButton.neumorphicLayer?.cornerRadius = wordSaveButton.frame.height / 2
         wordSaveButton.neumorphicLayer?.depthType = .convex
@@ -82,21 +64,18 @@ extension ListAddViewController {
         wordSaveButton.layer.shadowRadius = 2
         wordSaveButton.layer.shadowOpacity = 0.2
         wordSaveButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-        
-        categorySelectButton.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
-        categorySelectButton.neumorphicLayer?.depthType = .convex
-        categorySelectButton.neumorphicLayer?.elementDepth = 0
-        categorySelectButton.neumorphicLayer?.lightShadowOpacity = 0
-        categorySelectButton.neumorphicLayer?.darkShadowOpacity = 0
-        categorySelectButton.neumorphicLayer?.elementColor = UIColor.background.cgColor
-        categorySelectButton.neumorphicLayer?.edged = false
+        doneButton.neumorphicLayer?.elementBackgroundColor = UIColor.background.cgColor
+        doneButton.neumorphicLayer?.cornerRadius = wordSaveButton.frame.height / 2
+        doneButton.neumorphicLayer?.depthType = .convex
+        doneButton.neumorphicLayer?.elementDepth = 15
+        doneButton.neumorphicLayer?.lightShadowOpacity = 10
+        doneButton.layer.masksToBounds = false
+        doneButton.layer.borderWidth = 0.0
+        doneButton.layer.shadowColor = UIColor.black.cgColor
+        doneButton.layer.shadowRadius = 2
+        doneButton.layer.shadowOpacity = 0.2
+        doneButton.layer.shadowOffset = CGSize(width: 3, height: 3)
 
-    }
-    
-    func shadowView() {
-        shadowSetting(textView: titleFieldView)
-        shadowSetting(textView: wordFieldView)
-        shadowSetting(textView: meanFieldView)
     }
     
     func shadowSetting(textView: UIView) {
@@ -108,18 +87,35 @@ extension ListAddViewController {
         textView.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
 }
-
+//MARK: model
 extension ListAddViewController {
-    @objc func tappedSaveButton() {
-        if (tag == 0 && titleTextField.text == "") || (tag == 1 && titleTextField.text == "") {
-            let alertC = UIAlertController(title: "", message: GOGAKUConst.goGakuSetTitleErrorAlertMessage, preferredStyle: .alert)
-            let alertA = UIAlertAction(title: "確認", style: .default, handler: nil)
-            alertC.addAction(alertA)
-            present(alertC, animated: true, completion: nil)
-        } else {
-            debugPrint("add")
+    func listAddWord(word: String, mean: String) {
+        viewModel.listWordAdd(word: word, mean: mean)
+                .subscribe(
+                    onSuccess: { _ in
+                        self.listGetWord()
+                    },
+                    onError: { error in
+                        debugPrint(error)
+                    }
+                )
+                .disposed(by: disposeBag)
+    }
+    func listGetWord() {
+        let request = ListWordGetRequest()
+        let _ = try? GoGakuHttpClient.default.send(request).onSuccess { [weak self] response in
+            debugPrint("list get word success: \(response.status_code)")
+            self?.viewModel.wordList = response.body.data ?? []
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }.onError { error in
+            debugPrint("list get word error: \(error)")
         }
     }
+}
+
+extension ListAddViewController {
     
     @objc func tappedWordSaveButton() {
         if (wordTextField.text == "" && meanTextField.text == "") || (wordTextField.text == "") || (meanTextField.text == "") {
@@ -128,22 +124,23 @@ extension ListAddViewController {
             alertC.addAction(alertA)
             present(alertC, animated: true, completion: nil)
         } else {
-            tag = 1
-            viewModel.dummyTable.append(dummyTableData(word: wordTextField.text ?? "", mean: meanTextField.text ?? ""))
-            tableView.reloadData()
+            listAddWord(word: wordTextField.text ?? "", mean: meanTextField.text ?? "")
         }
+    }
+    @objc func tappedDoneButton() {
+        navigationController?.popViewControllers(viewsToPop: 2)
     }
 }
 
 extension ListAddViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.dummyTable.count
+        return viewModel.wordList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListAddTableViewCell else { fatalError() }
-        cell.wordLabel.text = viewModel.dummyTable[indexPath.row].word
-        cell.meanLabel.text = viewModel.dummyTable[indexPath.row].mean
+        cell.wordLabel.text = viewModel.wordList[indexPath.row].word
+        cell.meanLabel.text = viewModel.wordList[indexPath.row].mean
         cell.layer.cornerRadius = cell.frame.height / 2
         return cell
     }

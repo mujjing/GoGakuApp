@@ -19,7 +19,6 @@ class ListSetViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         listSetData()
-        debugPrint("papapapa \(viewModel.list.count)")
     }
 }
 
@@ -31,6 +30,7 @@ extension ListSetViewController {
         collectionViewCellUI()
         self.title = "学習セットリスト"
         view.backgroundColor = UIColor.background
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .plain, target: self, action: #selector(backButtonTapped))
 
     }
     func collectionViewCellUI(){
@@ -60,6 +60,20 @@ extension ListSetViewController {
             debugPrint("list set error: \(error)")
         }
     }
+    func listSetDelete() {
+        viewModel.listDelete()
+                .subscribe(
+                    onSuccess: { _ in
+                        debugPrint("listSetDelete")
+                        self.collectionView.reloadData()
+                        self.viewWillAppear(false)
+                    },
+                    onError: { error in
+                        debugPrint(error)
+                    }
+                )
+                .disposed(by: disposeBag)
+    }
 }
 
 extension ListSetViewController : UICollectionViewDelegate, UICollectionViewDataSource {
@@ -82,11 +96,46 @@ extension ListSetViewController : UICollectionViewDelegate, UICollectionViewData
     func tappedCategoryCell(indexPath: IndexPath, type: String) {
         switch type {
         case "categoryCell":
-            let storyBoard = UIStoryboard(name: "ListDetailViewController", bundle: Bundle.main)
-            guard let ListDetailVC = storyBoard.instantiateViewController(identifier: "ListDetailViewController") as? ListDetailViewController else { return }
-            ListDetailVC.paramTitle = viewModel.list[indexPath.row].title
-            ListDetailVC.paramImageName = viewModel.list[indexPath.row].image
-            navigationController?.pushViewController(ListDetailVC, animated: true)
+            let alertC = UIAlertController(title: "", message: GOGAKUConst.goGakuSetSelectMessage, preferredStyle: .actionSheet)
+            let alertDetail = UIAlertAction(title: "セット詳細", style: .default) { (_) in
+                let storyBoard = UIStoryboard(name: "ListDetailViewController", bundle: Bundle.main)
+                guard let ListDetailVC = storyBoard.instantiateViewController(identifier: "ListDetailViewController") as? ListDetailViewController else { return }
+                ListDetailVC.paramTitle = self.viewModel.list[indexPath.row].title
+                ListDetailVC.paramImageName = self.viewModel.list[indexPath.row].image
+                ListDetailVC.paramListId = self.viewModel.list[indexPath.row].id
+                let idDelivery = IDDelivery.shared
+                idDelivery.listID = self.viewModel.list[indexPath.row].id
+                self.navigationController?.pushViewController(ListDetailVC, animated: true)
+            }
+            let alertUpdate = UIAlertAction(title: "セット編集", style: .default) { (_) in
+                let storyBoard = UIStoryboard(name: "ListSetUpdateViewController", bundle: Bundle.main)
+                guard let ListUpdateVC = storyBoard.instantiateViewController(identifier: "ListSetUpdateViewController") as? ListSetUpdateViewController else { return }
+                ListUpdateVC.paramTitle = self.viewModel.list[indexPath.row].title
+                ListUpdateVC.paramImage = self.viewModel.list[indexPath.row].image
+                ListUpdateVC.paramId = self.viewModel.list[indexPath.row].id
+                let idDelivery = IDDelivery.shared
+                idDelivery.listID = self.viewModel.list[indexPath.row].id
+                self.navigationController?.pushViewController(ListUpdateVC, animated: true)
+            }
+            let alertDelete = UIAlertAction(title: "セット削除", style: .destructive) { (_) in
+                let alertController = UIAlertController(title: "", message: GOGAKUConst.goGakuSetDeleteMessage, preferredStyle: .alert)
+                let alertRemove = UIAlertAction(title: "削除", style: .destructive) { (_) in
+                    let idDelivery = IDDelivery.shared
+                    idDelivery.listID = self.viewModel.list[indexPath.row].id
+                    self.listSetDelete()
+                }
+                let alertCancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+                alertController.addAction(alertRemove)
+                alertController.addAction(alertCancel)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+            alertC.addAction(alertDetail)
+            alertC.addAction(alertUpdate)
+            alertC.addAction(alertDelete)
+            alertC.addAction(cancel)
+            
+            present(alertC, animated: true, completion: nil)
         default:
             break
         }
@@ -140,6 +189,9 @@ extension ListSetViewController : UICollectionViewDelegate, UICollectionViewData
 extension ListSetViewController {
     @objc func addButtonTapped() {
         debugPrint("add")
-        coordinator?.coordinateToListAddVC()
+        coordinator?.coordinateToListTitleVC()
+    }
+    @objc func backButtonTapped() {
+        navigationController?.popViewController(animated: true)
     }
 }

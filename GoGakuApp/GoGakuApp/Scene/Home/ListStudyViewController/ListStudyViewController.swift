@@ -24,7 +24,7 @@ class ListStudyViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        listSetData()
+        listGetWord()
     }
 }
 
@@ -56,17 +56,16 @@ extension ListStudyViewController {
 }
 
 extension ListStudyViewController {
-    func listSetData() {
-        let request = ListSetRequest()
+    func listGetWord() {
+        let request = ListWordGetRequest()
         let _ = try? GoGakuHttpClient.default.send(request).onSuccess { [weak self] response in
-            if let list = response.body.data {
-                self?.viewModel.list = list
-                DispatchQueue.main.async {
-                    self?.collectionView.reloadData()
-                }
+            debugPrint("list get word success: \(response.status_code)")
+            self?.viewModel.list = response.body.data ?? []
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
             }
         }.onError { error in
-            debugPrint("list set error: \(error)")
+            debugPrint("list get word error: \(error)")
         }
     }
 }

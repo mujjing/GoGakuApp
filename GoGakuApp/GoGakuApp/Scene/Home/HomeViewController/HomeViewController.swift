@@ -10,9 +10,12 @@ import EMTNeumorphicView
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var listCountLabel: UILabel!
+    @IBOutlet weak var randomStartButton: UIButton!
     @IBOutlet weak var studySetListButtonView: GradientView!
     @IBOutlet weak var studySetListButtonSubView: GradientView!
     var coordinator : HomeViewControllerFlow?
+    var viewModel : HomeViewModel = HomeViewModel()
     @IBOutlet weak var studySetListButton: UIButton!
     @IBOutlet weak var randomStartsubView: GradientView!
     @IBOutlet weak var randomStartView: GradientView!
@@ -23,7 +26,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         initView()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listSetData()
+    }
 }
 
 // init
@@ -31,7 +37,7 @@ extension HomeViewController {
     func initView() {
         configUI()
         studySetListButton.addTarget(self, action: #selector(tappedStudySetListButton), for: .touchUpInside)
-        
+        randomStartButton.addTarget(self, action: #selector(tappedRandomButton), for: .touchUpInside)
                                                                         
     }
 }
@@ -53,7 +59,7 @@ extension HomeViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.title = "\(Calendar.current.shortFormat(Date()))"
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.labelNavy]
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "D-day", style: .done, target: self, action: #selector(tappedNavigationBarButton(_:)))
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "D-day", style: .done, target: self, action: #selector(tappedNavigationBarButton(_:)))
     }
 
     func randomStartViewLayer() {
@@ -82,10 +88,32 @@ extension HomeViewController {
         self.startButtonView.layer.insertSublayer(gradient, at: 0)
     }
 }
+//MARK: model
+extension HomeViewController {
+    func listSetData() {
+        let request = ListSetRequest()
+        let _ = try? GoGakuHttpClient.default.send(request).onSuccess { [unowned self] response in
+            if let list = response.body.data {
+                self.viewModel.list = list
+                DispatchQueue.main.async {
+                    self.listCountLabel.text = "\(self.viewModel.list.count)件のセットがあります"
+                }
+            }
+        }.onError { error in
+            debugPrint("list set error: \(error)")
+        }
+    }
+}
 
 extension HomeViewController {
-    @objc func tappedStudySetListButton() {
+    @objc func tappedRandomButton() {
         coordinator?.coordinateToListSetVC()
+    }
+    @objc func tappedStudySetListButton() {
+        let alert = UIAlertController(title: "", message: GOGAKUConst.goGakuPreparing, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "確認", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
     @objc func tappedNavigationBarButton(_ sender: UIBarButtonItem) {
         

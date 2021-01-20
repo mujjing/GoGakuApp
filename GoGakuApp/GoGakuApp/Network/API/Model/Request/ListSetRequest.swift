@@ -14,7 +14,7 @@ final class ListSetRequest: GoGakuHttpRequest<ListSetResponse> {
     }
 
     override var path: String {
-        return "/api/todos"
+        return "/api/listset"
     }
 
     override var query: [String: Any] {

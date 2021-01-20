@@ -8,6 +8,8 @@
 import Foundation
 
 extension GoGakuAPIConfig {
+    
+    static let baseURLString = "http://localhost:8000"
 
     static var domain: String {
         return "localhost:8000"

@@ -22,6 +22,27 @@
 		A349667125B0238D006A03A5 /* ListStudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349667025B0238D006A03A5 /* ListStudyViewModel.swift */; };
 		A349667D25B0307A006A03A5 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = A349667C25B0307A006A03A5 /* iCarousel.m */; };
 		A349668025B030A1006A03A5 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349667F25B030A1006A03A5 /* UPCarouselFlowLayout.swift */; };
+		A36F97BD25B7043B0077AB10 /* ListWordAddResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97BC25B7043B0077AB10 /* ListWordAddResponse.swift */; };
+		A36F97C025B7044F0077AB10 /* ListWordUpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97BF25B7044F0077AB10 /* ListWordUpdateResponse.swift */; };
+		A36F97C325B704640077AB10 /* ListWordAllDeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97C225B704640077AB10 /* ListWordAllDeleteResponse.swift */; };
+		A36F97C625B704710077AB10 /* ListWordDeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97C525B704710077AB10 /* ListWordDeleteResponse.swift */; };
+		A36F97C925B704840077AB10 /* ListSetAddResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97C825B704840077AB10 /* ListSetAddResponse.swift */; };
+		A36F97CC25B704940077AB10 /* ListSetUpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97CB25B704940077AB10 /* ListSetUpdateResponse.swift */; };
+		A36F97D125B704B30077AB10 /* ListSetDeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97D025B704B30077AB10 /* ListSetDeleteResponse.swift */; };
+		A36F97D425B704C50077AB10 /* ListSetAddRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97D325B704C50077AB10 /* ListSetAddRequest.swift */; };
+		A36F97D825B704D50077AB10 /* ListSetUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97D725B704D50077AB10 /* ListSetUpdateRequest.swift */; };
+		A36F97DB25B704E60077AB10 /* ListSetDeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97DA25B704E60077AB10 /* ListSetDeleteRequest.swift */; };
+		A36F97DE25B704FF0077AB10 /* ListWordGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97DD25B704FF0077AB10 /* ListWordGetRequest.swift */; };
+		A36F97E125B705250077AB10 /* ListWordUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97E025B705250077AB10 /* ListWordUpdateRequest.swift */; };
+		A36F97E425B705400077AB10 /* ListWordAllDeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97E325B705400077AB10 /* ListWordAllDeleteRequest.swift */; };
+		A36F97E725B7054D0077AB10 /* ListWordDeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97E625B7054D0077AB10 /* ListWordDeleteRequest.swift */; };
+		A36F97EA25B7055C0077AB10 /* ListWordGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97E925B7055C0077AB10 /* ListWordGetResponse.swift */; };
+		A36F97F025B711C50077AB10 /* IDDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97EF25B711C50077AB10 /* IDDelivery.swift */; };
+		A36F97F325B714230077AB10 /* ListWordAddRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97F225B714230077AB10 /* ListWordAddRequest.swift */; };
+		A36F97F825B7173E0077AB10 /* ListTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36F97F725B7173E0077AB10 /* ListTitleViewController.storyboard */; };
+		A36F97FB25B717530077AB10 /* ListTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97FA25B717530077AB10 /* ListTitleViewController.swift */; };
+		A36F97FE25B717610077AB10 /* ListTitleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F97FD25B717610077AB10 /* ListTitleCoordinator.swift */; };
+		A36F980125B717730077AB10 /* ListTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F980025B717730077AB10 /* ListTitleViewModel.swift */; };
 		A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BBA25AB42850075AD18 /* Coordinator.swift */; };
 		A39B1BBF25AB428E0075AD18 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */; };
 		A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */; };
@@ -61,6 +82,21 @@
 		A3A6ACF625AC87AB0081F6EB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6ACF525AC87AB0081F6EB /* GradientView.swift */; };
 		A3EABFF725AFF57F0044DC5E /* ListDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EABFF625AFF57F0044DC5E /* ListDetailTableViewCell.swift */; };
 		A3EABFFB25B005390044DC5E /* ButtonGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EABFFA25B005390044DC5E /* ButtonGradientView.swift */; };
+		A3F79D2125B7524F001979BF /* NSObject + GoGaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D2025B7524F001979BF /* NSObject + GoGaku.swift */; };
+		A3F79D2525B752A1001979BF /* AssociatableObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D2425B752A1001979BF /* AssociatableObjectProtocol.swift */; };
+		A3F79D2925B75426001979BF /* GoGakuAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D2825B75426001979BF /* GoGakuAPIRequest.swift */; };
+		A3F79D2C25B754CF001979BF /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D2B25B754CF001979BF /* Platform.swift */; };
+		A3F79D2F25B756C3001979BF /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D2E25B756C3001979BF /* URLExtension.swift */; };
+		A3F79D3C25B7B77F001979BF /* ListQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F79D3B25B7B77F001979BF /* ListQuizViewController.storyboard */; };
+		A3F79D3F25B7B78E001979BF /* ListQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D3E25B7B78E001979BF /* ListQuizViewController.swift */; };
+		A3F79D4225B7BB0C001979BF /* ListQuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D4125B7BB0C001979BF /* ListQuizCollectionViewCell.swift */; };
+		A3F79D4525B7C24E001979BF /* ListQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D4425B7C24E001979BF /* ListQuizViewModel.swift */; };
+		A3F79D4F25B7EC41001979BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D4E25B7EC41001979BF /* HomeViewModel.swift */; };
+		A3F79D5325B808EB001979BF /* ListSetUpdateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F79D5225B808EB001979BF /* ListSetUpdateViewController.storyboard */; };
+		A3F79D5625B808FB001979BF /* ListSetUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D5525B808FB001979BF /* ListSetUpdateViewController.swift */; };
+		A3F79D5925B809FD001979BF /* ListSetUpdateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D5825B809FD001979BF /* ListSetUpdateCoordinator.swift */; };
+		A3F79D5C25B80A08001979BF /* ListSetUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D5B25B80A08001979BF /* ListSetUpdateViewModel.swift */; };
+		A3F79D5F25B80E65001979BF /* NavigationController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F79D5E25B80E65001979BF /* NavigationController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +119,27 @@
 		A349667B25B0307A006A03A5 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		A349667C25B0307A006A03A5 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		A349667F25B030A1006A03A5 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		A36F97BC25B7043B0077AB10 /* ListWordAddResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordAddResponse.swift; sourceTree = "<group>"; };
+		A36F97BF25B7044F0077AB10 /* ListWordUpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordUpdateResponse.swift; sourceTree = "<group>"; };
+		A36F97C225B704640077AB10 /* ListWordAllDeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordAllDeleteResponse.swift; sourceTree = "<group>"; };
+		A36F97C525B704710077AB10 /* ListWordDeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordDeleteResponse.swift; sourceTree = "<group>"; };
+		A36F97C825B704840077AB10 /* ListSetAddResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetAddResponse.swift; sourceTree = "<group>"; };
+		A36F97CB25B704940077AB10 /* ListSetUpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetUpdateResponse.swift; sourceTree = "<group>"; };
+		A36F97D025B704B30077AB10 /* ListSetDeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetDeleteResponse.swift; sourceTree = "<group>"; };
+		A36F97D325B704C50077AB10 /* ListSetAddRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetAddRequest.swift; sourceTree = "<group>"; };
+		A36F97D725B704D50077AB10 /* ListSetUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetUpdateRequest.swift; sourceTree = "<group>"; };
+		A36F97DA25B704E60077AB10 /* ListSetDeleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetDeleteRequest.swift; sourceTree = "<group>"; };
+		A36F97DD25B704FF0077AB10 /* ListWordGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordGetRequest.swift; sourceTree = "<group>"; };
+		A36F97E025B705250077AB10 /* ListWordUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordUpdateRequest.swift; sourceTree = "<group>"; };
+		A36F97E325B705400077AB10 /* ListWordAllDeleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordAllDeleteRequest.swift; sourceTree = "<group>"; };
+		A36F97E625B7054D0077AB10 /* ListWordDeleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordDeleteRequest.swift; sourceTree = "<group>"; };
+		A36F97E925B7055C0077AB10 /* ListWordGetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordGetResponse.swift; sourceTree = "<group>"; };
+		A36F97EF25B711C50077AB10 /* IDDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDDelivery.swift; sourceTree = "<group>"; };
+		A36F97F225B714230077AB10 /* ListWordAddRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWordAddRequest.swift; sourceTree = "<group>"; };
+		A36F97F725B7173E0077AB10 /* ListTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTitleViewController.storyboard; sourceTree = "<group>"; };
+		A36F97FA25B717530077AB10 /* ListTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleViewController.swift; sourceTree = "<group>"; };
+		A36F97FD25B717610077AB10 /* ListTitleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleCoordinator.swift; sourceTree = "<group>"; };
+		A36F980025B717730077AB10 /* ListTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleViewModel.swift; sourceTree = "<group>"; };
 		A39B1BBA25AB42850075AD18 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A39B1BBE25AB428E0075AD18 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -122,6 +179,21 @@
 		A3A6ACF525AC87AB0081F6EB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A3EABFF625AFF57F0044DC5E /* ListDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A3EABFFA25B005390044DC5E /* ButtonGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradientView.swift; sourceTree = "<group>"; };
+		A3F79D2025B7524F001979BF /* NSObject + GoGaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + GoGaku.swift"; sourceTree = "<group>"; };
+		A3F79D2425B752A1001979BF /* AssociatableObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatableObjectProtocol.swift; sourceTree = "<group>"; };
+		A3F79D2825B75426001979BF /* GoGakuAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoGakuAPIRequest.swift; sourceTree = "<group>"; };
+		A3F79D2B25B754CF001979BF /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		A3F79D2E25B756C3001979BF /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		A3F79D3B25B7B77F001979BF /* ListQuizViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListQuizViewController.storyboard; sourceTree = "<group>"; };
+		A3F79D3E25B7B78E001979BF /* ListQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuizViewController.swift; sourceTree = "<group>"; };
+		A3F79D4125B7BB0C001979BF /* ListQuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuizCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3F79D4425B7C24E001979BF /* ListQuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuizViewModel.swift; sourceTree = "<group>"; };
+		A3F79D4E25B7EC41001979BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A3F79D5225B808EB001979BF /* ListSetUpdateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListSetUpdateViewController.storyboard; sourceTree = "<group>"; };
+		A3F79D5525B808FB001979BF /* ListSetUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetUpdateViewController.swift; sourceTree = "<group>"; };
+		A3F79D5825B809FD001979BF /* ListSetUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetUpdateCoordinator.swift; sourceTree = "<group>"; };
+		A3F79D5B25B80A08001979BF /* ListSetUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSetUpdateViewModel.swift; sourceTree = "<group>"; };
+		A3F79D5E25B80E65001979BF /* NavigationController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController + Extension.swift"; sourceTree = "<group>"; };
 		B3DF3A6458E1783366C550E3 /* Pods-GoGakuApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGakuApp.release.xcconfig"; path = "Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp.release.xcconfig"; sourceTree = "<group>"; };
 		DA04BBB71660C5641BCFF3B3 /* Pods-GoGakuApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGakuApp.debug.xcconfig"; path = "Target Support Files/Pods-GoGakuApp/Pods-GoGakuApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +277,10 @@
 				A3A6ACF525AC87AB0081F6EB /* GradientView.swift */,
 				A3EABFFA25B005390044DC5E /* ButtonGradientView.swift */,
 				A3A5CE8D25B48042008C664F /* String + Extentsion.swift */,
+				A36F97EF25B711C50077AB10 /* IDDelivery.swift */,
+				A3F79D2025B7524F001979BF /* NSObject + GoGaku.swift */,
+				A3F79D2E25B756C3001979BF /* URLExtension.swift */,
+				A3F79D5E25B80E65001979BF /* NavigationController + Extension.swift */,
 			);
 			path = Extenseion;
 			sourceTree = "<group>";
@@ -222,6 +298,9 @@
 		A32879AD25AB34E800172530 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A3F79D5125B808CF001979BF /* LIstSetUpdateViewController */,
+				A3F79D3A25B7B73D001979BF /* ListQuizViewController */,
+				A36F97F625B717210077AB10 /* ListTitleViewController */,
 				A349666325B021EB006A03A5 /* ListStudyViewController */,
 				A39B1BF525AB7FB20075AD18 /* ListAddViewController */,
 				A39B1BC525AB44680075AD18 /* ListDetailViewController */,
@@ -237,6 +316,7 @@
 				A32879AF25AB3EEF00172530 /* HomeViewController.storyboard */,
 				A32879B225AB3EFD00172530 /* HomeViewController.swift */,
 				A39B1BC125AB43410075AD18 /* HomeCoordinator.swift */,
+				A3F79D4E25B7EC41001979BF /* HomeViewModel.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -282,9 +362,21 @@
 			path = Carousel;
 			sourceTree = "<group>";
 		};
+		A36F97F625B717210077AB10 /* ListTitleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A36F97F725B7173E0077AB10 /* ListTitleViewController.storyboard */,
+				A36F97FA25B717530077AB10 /* ListTitleViewController.swift */,
+				A36F97FD25B717610077AB10 /* ListTitleCoordinator.swift */,
+				A36F980025B717730077AB10 /* ListTitleViewModel.swift */,
+			);
+			path = ListTitleViewController;
+			sourceTree = "<group>";
+		};
 		A39B1BB825AB41FF0075AD18 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				A3F79D2325B75297001979BF /* Util */,
 				A328799E25AB33DD00172530 /* Assets.xcassets */,
 				A328799725AB33DC00172530 /* SceneDelegate.swift */,
 				A328799525AB33DC00172530 /* AppDelegate.swift */,
@@ -360,6 +452,7 @@
 			children = (
 				A3A5CE6125B47BC3008C664F /* GoGakuWebConfig */,
 				A3A5CE6025B47BB6008C664F /* GoGakuAPIConfig */,
+				A3F79D2825B75426001979BF /* GoGakuAPIRequest.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -432,6 +525,14 @@
 			isa = PBXGroup;
 			children = (
 				A3A5CE8725B47E6B008C664F /* ListSetRequest.swift */,
+				A36F97D325B704C50077AB10 /* ListSetAddRequest.swift */,
+				A36F97D725B704D50077AB10 /* ListSetUpdateRequest.swift */,
+				A36F97DA25B704E60077AB10 /* ListSetDeleteRequest.swift */,
+				A36F97DD25B704FF0077AB10 /* ListWordGetRequest.swift */,
+				A36F97F225B714230077AB10 /* ListWordAddRequest.swift */,
+				A36F97E025B705250077AB10 /* ListWordUpdateRequest.swift */,
+				A36F97E325B705400077AB10 /* ListWordAllDeleteRequest.swift */,
+				A36F97E625B7054D0077AB10 /* ListWordDeleteRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -440,8 +541,47 @@
 			isa = PBXGroup;
 			children = (
 				A3A5CE8A25B47E78008C664F /* ListSetResponse.swift */,
+				A36F97C825B704840077AB10 /* ListSetAddResponse.swift */,
+				A36F97CB25B704940077AB10 /* ListSetUpdateResponse.swift */,
+				A36F97D025B704B30077AB10 /* ListSetDeleteResponse.swift */,
+				A36F97E925B7055C0077AB10 /* ListWordGetResponse.swift */,
+				A36F97BC25B7043B0077AB10 /* ListWordAddResponse.swift */,
+				A36F97BF25B7044F0077AB10 /* ListWordUpdateResponse.swift */,
+				A36F97C225B704640077AB10 /* ListWordAllDeleteResponse.swift */,
+				A36F97C525B704710077AB10 /* ListWordDeleteResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		A3F79D2325B75297001979BF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A3F79D2425B752A1001979BF /* AssociatableObjectProtocol.swift */,
+				A3F79D2B25B754CF001979BF /* Platform.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A3F79D3A25B7B73D001979BF /* ListQuizViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3F79D3B25B7B77F001979BF /* ListQuizViewController.storyboard */,
+				A3F79D3E25B7B78E001979BF /* ListQuizViewController.swift */,
+				A3F79D4125B7BB0C001979BF /* ListQuizCollectionViewCell.swift */,
+				A3F79D4425B7C24E001979BF /* ListQuizViewModel.swift */,
+			);
+			path = ListQuizViewController;
+			sourceTree = "<group>";
+		};
+		A3F79D5125B808CF001979BF /* LIstSetUpdateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3F79D5225B808EB001979BF /* ListSetUpdateViewController.storyboard */,
+				A3F79D5525B808FB001979BF /* ListSetUpdateViewController.swift */,
+				A3F79D5825B809FD001979BF /* ListSetUpdateCoordinator.swift */,
+				A3F79D5B25B80A08001979BF /* ListSetUpdateViewModel.swift */,
+			);
+			path = LIstSetUpdateViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,11 +645,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A39B1BC725AB448E0075AD18 /* ListSetViewController.storyboard in Resources */,
+				A3F79D5325B808EB001979BF /* ListSetUpdateViewController.storyboard in Resources */,
 				A32879B025AB3EEF00172530 /* HomeViewController.storyboard in Resources */,
 				A39B1BF725AB7FC60075AD18 /* ListAddViewController.storyboard in Resources */,
 				A32879B725AB3F4500172530 /* InitialViewController.storyboard in Resources */,
+				A3F79D3C25B7B77F001979BF /* ListQuizViewController.storyboard in Resources */,
 				A328799F25AB33DD00172530 /* Assets.xcassets in Resources */,
 				A349666525B0220C006A03A5 /* ListStudyViewController.storyboard in Resources */,
+				A36F97F825B7173E0077AB10 /* ListTitleViewController.storyboard in Resources */,
 				A39B1BCD25AB44B20075AD18 /* ListDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,52 +706,85 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F79D2C25B754CF001979BF /* Platform.swift in Sources */,
 				A39B1BE725AB670C0075AD18 /* BaseViewController.swift in Sources */,
+				A36F97C025B7044F0077AB10 /* ListWordUpdateResponse.swift in Sources */,
 				A3A6ACF325AC84610081F6EB /* UIView + Extension.swift in Sources */,
 				A3A5CE8825B47E6B008C664F /* ListSetRequest.swift in Sources */,
 				A3A5CE9125B48D0A008C664F /* ListDetailViewModel.swift in Sources */,
 				A39B1BD625AB44E00075AD18 /* ListDetailCoordinator.swift in Sources */,
 				A39B1BBF25AB428E0075AD18 /* AppCoordinator.swift in Sources */,
 				A3A5CE8325B47DDB008C664F /* HttpClient.swift in Sources */,
+				A36F97D425B704C50077AB10 /* ListSetAddRequest.swift in Sources */,
+				A36F97CC25B704940077AB10 /* ListSetUpdateResponse.swift in Sources */,
 				A32879BA25AB3F5100172530 /* InitialViewController.swift in Sources */,
 				A3A5CE8B25B47E78008C664F /* ListSetResponse.swift in Sources */,
 				A328799625AB33DC00172530 /* AppDelegate.swift in Sources */,
 				A39B1C0025AB88B90075AD18 /* Calendar + Extension.swift in Sources */,
 				A3A5CE7A25B47D86008C664F /* HttpTask.swift in Sources */,
 				A39B1BBB25AB42850075AD18 /* Coordinator.swift in Sources */,
+				A36F97FE25B717610077AB10 /* ListTitleCoordinator.swift in Sources */,
 				A349667D25B0307A006A03A5 /* iCarousel.m in Sources */,
+				A36F97C625B704710077AB10 /* ListWordDeleteResponse.swift in Sources */,
 				A3A5CE7225B47CF1008C664F /* GoGakuHttpClient.swift in Sources */,
+				A36F97C925B704840077AB10 /* ListSetAddResponse.swift in Sources */,
 				A349666E25B02380006A03A5 /* ListStudyCoordinator.swift in Sources */,
+				A3F79D2525B752A1001979BF /* AssociatableObjectProtocol.swift in Sources */,
+				A36F97FB25B717530077AB10 /* ListTitleViewController.swift in Sources */,
 				A39B1BEE25AB79710075AD18 /* ListSetViewModel.swift in Sources */,
 				A39B1BF125AB7E340075AD18 /* ListSetAddButtonCollectionViewCell.swift in Sources */,
 				A3A5CE7525B47D00008C664F /* GoGakuHttpRequest.swift in Sources */,
+				A3F79D4F25B7EC41001979BF /* HomeViewModel.swift in Sources */,
+				A36F97DE25B704FF0077AB10 /* ListWordGetRequest.swift in Sources */,
+				A3F79D2F25B756C3001979BF /* URLExtension.swift in Sources */,
+				A36F97D125B704B30077AB10 /* ListSetDeleteResponse.swift in Sources */,
+				A36F97DB25B704E60077AB10 /* ListSetDeleteRequest.swift in Sources */,
+				A36F980125B717730077AB10 /* ListTitleViewModel.swift in Sources */,
+				A3F79D5625B808FB001979BF /* ListSetUpdateViewController.swift in Sources */,
 				A328799825AB33DC00172530 /* SceneDelegate.swift in Sources */,
+				A3F79D5F25B80E65001979BF /* NavigationController + Extension.swift in Sources */,
 				A3A5CE6925B47C5E008C664F /* GoGakuWebConfig.swift in Sources */,
 				A3A5CE6325B47BE6008C664F /* GoGakuAPIConfig.swift in Sources */,
 				A39B1BCA25AB449E0075AD18 /* ListSetViewController.swift in Sources */,
 				A349668025B030A1006A03A5 /* UPCarouselFlowLayout.swift in Sources */,
+				A36F97F025B711C50077AB10 /* IDDelivery.swift in Sources */,
 				A39B1BFD25AB80330075AD18 /* ListAddCoordinator.swift in Sources */,
 				A3A5CE7D25B47DA5008C664F /* HttpRequest.swift in Sources */,
+				A36F97E125B705250077AB10 /* ListWordUpdateRequest.swift in Sources */,
 				A3A6ACF025AC341A0081F6EB /* ListAddViewModel.swift in Sources */,
 				A349666825B0221F006A03A5 /* ListStudyViewController.swift in Sources */,
+				A36F97E425B705400077AB10 /* ListWordAllDeleteRequest.swift in Sources */,
+				A3F79D4225B7BB0C001979BF /* ListQuizCollectionViewCell.swift in Sources */,
+				A3F79D5925B809FD001979BF /* ListSetUpdateCoordinator.swift in Sources */,
 				A3A6ACF625AC87AB0081F6EB /* GradientView.swift in Sources */,
 				A3A6ACEC25AC2ED50081F6EB /* ListAddTableViewCell.swift in Sources */,
 				A39B1BD025AB44BA0075AD18 /* ListDetailViewController.swift in Sources */,
+				A36F97D825B704D50077AB10 /* ListSetUpdateRequest.swift in Sources */,
 				A3A5CE6C25B47C72008C664F /* GoGakuWebConfig+prod.swift in Sources */,
 				A39B1C0425AB89060075AD18 /* GOGAKUConst.swift in Sources */,
 				A39B1BEB25AB78F10075AD18 /* ListSetCollectionViewCell.swift in Sources */,
+				A36F97EA25B7055C0077AB10 /* ListWordGetResponse.swift in Sources */,
+				A3F79D2125B7524F001979BF /* NSObject + GoGaku.swift in Sources */,
+				A36F97C325B704640077AB10 /* ListWordAllDeleteResponse.swift in Sources */,
 				A39B1BC225AB43410075AD18 /* HomeCoordinator.swift in Sources */,
 				A3EABFFB25B005390044DC5E /* ButtonGradientView.swift in Sources */,
 				A39B1BFA25AB7FD60075AD18 /* ListAddViewController.swift in Sources */,
+				A3F79D5C25B80A08001979BF /* ListSetUpdateViewModel.swift in Sources */,
+				A36F97BD25B7043B0077AB10 /* ListWordAddResponse.swift in Sources */,
+				A3F79D3F25B7B78E001979BF /* ListQuizViewController.swift in Sources */,
+				A36F97E725B7054D0077AB10 /* ListWordDeleteRequest.swift in Sources */,
 				A39B1BE125AB562F0075AD18 /* UIColor + Extension.swift in Sources */,
 				A349666B25B02371006A03A5 /* ListStudyCollectionViewCell.swift in Sources */,
 				A349667125B0238D006A03A5 /* ListStudyViewModel.swift in Sources */,
 				A3EABFF725AFF57F0044DC5E /* ListDetailTableViewCell.swift in Sources */,
 				A3A5CE8E25B48042008C664F /* String + Extentsion.swift in Sources */,
+				A3F79D4525B7C24E001979BF /* ListQuizViewModel.swift in Sources */,
+				A36F97F325B714230077AB10 /* ListWordAddRequest.swift in Sources */,
 				A32879B325AB3EFD00172530 /* HomeViewController.swift in Sources */,
 				A39B1BD325AB44D00075AD18 /* ListSetCoordinator.swift in Sources */,
 				A3A5CE6625B47BFB008C664F /* GoGakuAPIConfig+prod.swift in Sources */,
 				A3A5CE8025B47DC4008C664F /* HttpResponse.swift in Sources */,
+				A3F79D2925B75426001979BF /* GoGakuAPIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,7 +926,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "GoGakuApp/Scene/Home/ListStudyViewController/Parts/Carousel/GoGakuApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -772,7 +948,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoGakuApp/Scene/Home/ListStudyViewController/Parts/Carousel/GoGakuApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

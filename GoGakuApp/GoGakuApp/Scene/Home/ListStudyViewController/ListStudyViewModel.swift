@@ -8,15 +8,7 @@
 import Foundation
 
 class ListStudyViewModel: NSObject {
-    var dummy: [sampleData] = [
-        sampleData(image: "ICON1", name: "Lolep"),
-        sampleData(image: "ICON2", name: "sample2"),
-    ]
-    var list : [ListSet] = []
-}
 
-struct sampleData {
-    let image : String?
-    let name : String
+    var list : [ListWordGet] = []
 }
 

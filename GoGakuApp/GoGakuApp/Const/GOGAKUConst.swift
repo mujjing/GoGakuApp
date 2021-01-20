@@ -20,5 +20,12 @@ struct GOGAKUConst {
     static let goGakuStudyCardFrontLabel = "タップして意味を確認！"
     static let goGakuStudyCardBehindLabel = "タップして単語を確認！"
     static let goGakuSetTitleErrorAlertMessage = "タイトル必ず入力してください"
+    static let goGakuSetImageErrorAlertMessage = "カテゴリーイメージを必ず選択してください"
     static let goGakuSetWordErrorAlertMessage = "単語と意味を必ず入力してください"
+    static let goGakuToolBarDone = "完了"
+    static let goGakuSetSelectMessage = "項目を選択してください"
+    static let goGakuSetDeleteMessage = "本当にセットを削除しますか？"
+    static let goGakuDetailListMessage = "下記の事項を選択してください"
+    static let goGakuQuizDone = "Quizが終わりました"
+    static let goGakuPreparing = "この機能は準備中です"
 }

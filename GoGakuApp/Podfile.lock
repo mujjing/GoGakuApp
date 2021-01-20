@@ -1,16 +1,34 @@
 PODS:
+  - Alamofire (5.4.1)
   - EMTNeumorphicView (1.0.4)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - Alamofire
   - EMTNeumorphicView
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - EMTNeumorphicView
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 8626e88dcf746740f9c8e42f5f8cdf7ea861a639
+PODFILE CHECKSUM: 577546d26af31e5dcba9b2eede5c7b2e136d5fe7
 
 COCOAPODS: 1.10.0

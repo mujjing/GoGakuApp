@@ -6,14 +6,22 @@
 //
 
 import Foundation
-
+import Alamofire
+import RxSwift
+import RxCocoa
 class ListAddViewModel: NSObject {
-    var dummyTable : [dummyTableData] = [
-        dummyTableData(word: "baseBall", mean: "野球")
-    ]
-}
-
-struct dummyTableData {
-    let word: String
-    let mean: String
+    var wordList:[ListWordGet] = []
+    
+    func listWordAdd(word: String, mean: String) -> Single<ListWordAddResponse> {
+        let request = ListWordAddRequest(word: word, mean: mean)
+        let task = GoGakuHttpClient.default.send(request)
+            .do(onSuccess: { response in
+                
+            })
+        .asObservable()
+        .share()
+        .asSingle()
+        task.subscribe().disposed(by: disposeBag)
+        return task
+    }
 }

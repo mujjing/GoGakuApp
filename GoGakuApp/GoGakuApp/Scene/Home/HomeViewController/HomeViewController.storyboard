@@ -43,16 +43,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df5-tN-fhO" customClass="EMTNeumorphicView" customModule="EMTNeumorphicView">
                                                 <rect key="frame" x="18" y="18" width="240" height="240"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iu6-5Y-pIH">
-                                                        <rect key="frame" x="8" y="45" width="234" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="7GE-cd-Zn3"/>
-                                                            <constraint firstAttribute="width" constant="234" id="TqA-xs-cnv"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-CP-aW7">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
@@ -63,15 +53,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="iu6-5Y-pIH" firstAttribute="top" secondItem="Df5-tN-fhO" secondAttribute="top" constant="45" id="NW6-tm-dQi"/>
                                                     <constraint firstItem="4NL-CP-aW7" firstAttribute="top" secondItem="Df5-tN-fhO" secondAttribute="top" id="X2L-94-rEg"/>
-                                                    <constraint firstAttribute="trailing" secondItem="iu6-5Y-pIH" secondAttribute="trailing" constant="-2" id="X6n-7q-8pf"/>
                                                     <constraint firstAttribute="width" secondItem="Df5-tN-fhO" secondAttribute="height" multiplier="1:1" id="bKb-Zm-hCn"/>
                                                     <constraint firstAttribute="trailing" secondItem="4NL-CP-aW7" secondAttribute="trailing" id="d89-Xc-ikb"/>
                                                     <constraint firstAttribute="width" constant="240" id="dwf-Yf-YtY"/>
                                                     <constraint firstItem="4NL-CP-aW7" firstAttribute="leading" secondItem="Df5-tN-fhO" secondAttribute="leading" id="iEL-PX-lSc"/>
                                                     <constraint firstAttribute="bottom" secondItem="4NL-CP-aW7" secondAttribute="bottom" id="jmB-aQ-Hta"/>
-                                                    <constraint firstItem="iu6-5Y-pIH" firstAttribute="leading" secondItem="Df5-tN-fhO" secondAttribute="leading" constant="8" id="quu-Yd-pws"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -110,7 +97,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RANDAM MODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyo-hi-WAe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyo-hi-WAe">
                                 <rect key="frame" x="37" y="431.5" width="300" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="WJK-Vh-Ggc"/>
@@ -119,17 +106,17 @@
                                 <color key="textColor" red="0.92156862750000001" green="0.20784313730000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新追加されたリストから学習スタートします。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-Yn-9HB">
-                                <rect key="frame" x="37" y="456.5" width="300" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学習内容はウェブでも確認できます。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-Yn-9HB">
+                                <rect key="frame" x="37" y="456.5" width="300" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14.5" id="8Ua-vN-9K9"/>
+                                    <constraint firstAttribute="height" constant="34" id="8Ua-vN-9K9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-hR-agF" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
-                                <rect key="frame" x="97" y="486" width="180" height="50"/>
+                                <rect key="frame" x="97" y="485.5" width="180" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-7p-TtF" customClass="GradientView" customModule="GoGakuApp" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="160" height="30"/>
@@ -143,8 +130,8 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <color key="tintColor" red="0.85098039219999999" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="MY学習セットリスト">
-                                                    <color key="titleColor" red="0.16862745100000001" green="0.25098039220000001" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Web画面へ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
@@ -159,10 +146,10 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                <color key="value" red="0.70980392156862748" green="0.80784313725490198" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.96862745098039216" green="0.792156862745098" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                <color key="value" red="0.93333333333333335" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.92156862745098034" green="0.23529411764705882" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -194,7 +181,7 @@
                             <constraint firstItem="u3h-Yn-9HB" firstAttribute="leading" secondItem="vMI-QJ-d3l" secondAttribute="leading" constant="37" id="CNs-nq-Ixx"/>
                             <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="1UH-XA-ba1" secondAttribute="trailing" constant="16" id="DYg-Nk-yme"/>
                             <constraint firstItem="zyo-hi-WAe" firstAttribute="top" secondItem="KZF-v1-Go2" secondAttribute="bottom" constant="18" id="Ecv-f0-yrF"/>
-                            <constraint firstItem="07Y-hR-agF" firstAttribute="top" secondItem="u3h-Yn-9HB" secondAttribute="bottom" constant="15" id="Oym-jZ-DaU"/>
+                            <constraint firstItem="07Y-hR-agF" firstAttribute="top" secondItem="u3h-Yn-9HB" secondAttribute="bottom" constant="-5" id="Oym-jZ-DaU"/>
                             <constraint firstItem="KZF-v1-Go2" firstAttribute="centerX" secondItem="8wk-Xa-2g8" secondAttribute="centerX" id="QYV-hs-Nzd"/>
                             <constraint firstItem="KZF-v1-Go2" firstAttribute="top" secondItem="GaP-1e-a3o" secondAttribute="bottom" constant="20" id="Qmd-GU-cp0"/>
                             <constraint firstItem="vMI-QJ-d3l" firstAttribute="trailing" secondItem="u3h-Yn-9HB" secondAttribute="trailing" constant="38" id="VfR-9Z-57d"/>
@@ -209,6 +196,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="listCountLabel" destination="GaP-1e-a3o" id="5rq-fV-gRd"/>
+                        <outlet property="randomStartButton" destination="4NL-CP-aW7" id="moW-TT-p4u"/>
                         <outlet property="randomStartView" destination="KZF-v1-Go2" id="UDc-cM-2Xs"/>
                         <outlet property="randomStartsubView" destination="OIo-g3-wpW" id="TL3-Ie-5ga"/>
                         <outlet property="startButtonView" destination="Df5-tN-fhO" id="PKM-85-Po0"/>

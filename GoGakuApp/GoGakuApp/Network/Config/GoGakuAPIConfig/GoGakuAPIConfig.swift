@@ -14,7 +14,9 @@ protocol GoGakuAPIConfigProtocol {
 }
 
 struct GoGakuAPIConfig: GoGakuAPIConfigProtocol {
-
+    static var baseURL: URL {
+        return URL(string: baseURLString)!
+    }
     // インスタンス化させない
     private init() {}
 
